@@ -26,9 +26,9 @@
     《CPU设计实战》200页建议awvalid和wvalid同时置为有效，虽然写请求和写数据没有依赖。
     《CPU设计实战》201页指出一定要考虑后发出的请求先返回的状况。不过我看学长的代码，似乎是通过控制ID值一样，保证先发出的请求先返回。
 ```
-![Read Burst.png](Read Burst.png)
-![Overlapping read bursts.png](Overlapping read bursts.png)
-![Write Burst.png](Write Burst.png)
+![Read Burst.png](![输入图片说明](Read%20Burst.png)Read Burst.png)
+![Overlapping read bu![输入图片说明](Overlapping%20read%20bursts.png)rsts.png](Overlapping read bursts.png)
+![Write Burst.png](Write Burst![输入图片说明](Write%20Burst.png).png)
 
 #### 1.3 burst相关参数
 ```
@@ -40,6 +40,6 @@
 ```
     下面第一张:分析读事务依赖状况;第二张和第三张分析写事务的依赖状况。
 ```
-![read dependency.png](read dependency.png)
-![write dependency1.png](write dependency1.png)
-![write dependency2.png](write dependency2.png)
+![read dependency.png](re![输入图片说明](read%20dependency.png)ad dependency.png)
+![write dependency1.png](write dependen![输入图片说明](write%20dependency1.png)cy1.png)
+![write dependency2.png](write depen![输入图片说明](write%20dependency2.png)dency2.png)
