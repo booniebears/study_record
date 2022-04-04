@@ -29,7 +29,7 @@
     再看Cache结构，由存储数据Data域,Tag域,和Valid bit构成。Data域的宽度自己定义(当然下图是经典的4 bytes),Tag就是地址中的Tag,
 valid bit判定当前Cache line是否有效。我们谈Cache size的时候一般只是谈Data域,不考虑Tag和Valid bit。
 ```
-![Cache Structure.png](Cache Structure.png)
+![Cache Structure.png](图片/Cache%20Structure.png)
 
 #### 2.2 直接映射原理
 知乎那篇文章讲的非常清楚，我就直接复制粘贴了。下面有配图。
@@ -48,7 +48,7 @@ tag也是cache的一部分，但是我们谈到cache size的时候并不考虑ta
 cache中的数据都应该是无效的，因为还没有缓存任何数据。cache控制器可以根据valid bit确认当前cache line数据是否有效。所以，上述比较tag确认
 cache line是否命中之前还会检查valid bit是否有效。只有在有效的情况下，比较tag才有意义。如果无效，直接判定cache缺失。
 ```
-![Cache直接映射.png](Cache直接映射.png)
+![Cache直接映射.png](图片/Cache直接映射.png)
 
 ### 3.二路组相连
 #### 3.1 为什么设计二路组相连
@@ -64,7 +64,7 @@ cache line是否命中之前还会检查valid bit是否有效。只有在有效�
 上面提到的Cache miss 100%的问题。
     王老师建议我们使用直接映射或者两路组相连结构，其余的结构我们就不讨论了。
 ```
-![Cache Structure2.png](Cache Structure2.png)
+![Cache Structure2.png](图片/Cache%20Structure2.png)
 
 ### 4.Cache更新问题 -- 针对写存储器操作
 ```
