@@ -72,6 +72,10 @@ cache line是否命中之前还会检查valid bit是否有效。只有在有效�
     Write back:当CPU执行store指令并在cache命中时，我们只更新cache中的数据。并且每个cache line中会有一个bit位记录数据是否被修改过，称之为
 dirty bit。我们会将dirty bit置位。主存中的数据只会在cache line被替换或者显示的clean操作时更新。因此，主存中的数据可能是未修改的数据，而
 修改的数据躺在cache中。cache和主存的数据可能不一致。
+    
+    Write allocate:当CPU写数据发生cache缺失时，才会考虑写分配策略。当我们不支持写分配的情况下，写指令只会更新主存数据，然后就结束了。当支持
+写分配的时候，我们首先从主存中加载数据到cache line中，然后会更新cache line中的数据。
+    Write allocate和Write back一般绑定使用。
 ```
 
 
