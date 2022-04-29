@@ -1,0 +1,175 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+  VIVADO_PATH: "/tools/Xilinx/Vivado/2018.3/bin/vivado"
+  PROJECT_DIR: "vivado"
+  PROJECT_NAME: "Genshin"
+  TOP_MODULE_NAME: "nscscc_soc_top"
+
+stages:
+  - Git_PASS
+  - SRAM_TEST
+  # - init_loongson_projects
+  - AXI_TEST
+  - PERF_TEST
+  - bitstreams
+  #- loongson_tests
+  # - bitstreams
+
+
+before_script:
+  - sudo chmod -R 777 /home/gitlab-runner/
+  # - git checkout ${PROJECT_DIR}/${PROJECT_NAME}.srcs/sources_1/bd/bd_soc/ip
+  # - git checkout loongson/soc_axi_func/rtl/xilinx_ip
+  # - git checkout loongson/soc_axi_perf/rtl/xilinx_ip
+#test
+git_check:
+  tags:
+    - vivado
+  stage: Git_PASS
+  # script:
+  #   - echo start to compile the project
+  script:
+    - pwd
+    - echo you success send the file to the server!
+    - sudo chmod -R 777 /home/gitlab-runner/
+
+cpu_simulation:
+  tags:
+    - vivado
+  stage: SRAM_TEST
+  only:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /\[SRAM\]/i
+  # script:
+  #   - echo start to compile the project
+  script:
+    #- chmod -R 777 /home
+    - echo start to compile the project
+#    - sed -i "s/\`define COMPILE_FULL_M/\\/\\/ \`define COMPILE_FULL_M/" src/compile_options.svh
+#    - export SIMULATION=sim_1
+    - export LOG_PATH=/root/Desktop/project_1/project_1.sim/sim_1/behav/xsim/simulate.log
+    - export FLAG='\-\-\-\-PASS!!!'
+    - ${VIVADO_PATH} -mode tcl -source /root/scripts/runsimulation.tcl /root/Desktop/project_1/project_1.xpr
+    - bash /root/scripts/check_simulation.sh
+    - sudo chmod -R 777 /home/gitlab-runner/
+  artifacts:
+    paths:
+      - /root/Desktop/project_1/project_1.sim/sim_1/behav/xsim/simulate.log
+    when: always
+
+axi_simulation:
+  tags:
+    - vivado
+  stage: AXI_TEST
+  only:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /\[AXI\]/i
+  # script:
+  #   - echo start to compile the projectAXI
+  script:
+    #- chmod -R 777 /home
+    - echo start to compile the project
+#    - sed -i "s/\`define COMPILE_FULL_M/\\/\\/ \`define COMPILE_FULL_M/" src/compile_options.svh
+#    - export SIMULATION=sim_1
+    - export LOG_PATH=/root/project_axi/project_axi.sim/sim_1/behav/xsim/simulate.log
+    - export FLAG='\-\-\-\-PASS!!!'
+    - sudo ${VIVADO_PATH} -mode tcl -source /root/scripts/runsimulation-axi.tcl /root/project_axi/project_axi.xpr
+    - bash /root/scripts/check_simulation.sh
+    - sudo chmod -R 777 /home/gitlab-runner/
+  artifacts:
+    paths:
+      - /root/project_axi/project_axi.sim/sim_1/behav/xsim/simulate.log
+    when: always
+  
+perf_test_simulation:
+  tags:
+    - vivado
+  stage: PERF_TEST
+  # run performance test only when specified, for it is also slow
+  # the result of performance test will not be checked
+  only:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /\[PERF\]/i
+  script:
+    #- chmod -R 777 /home
+    - sudo ${VIVADO_PATH} -mode tcl -source /tools/run_allbench.tcl /tools/project_perf/project_perf.xpr
+    - sudo chmod -R 777 /home/gitlab-runner/
+  artifacts:
+    paths:
+      - /tools/project_perf/project_perf.sim/sim_1/behav/xsim/simulate.log
+    when: always
+
+
+func_test_bitstream:
+  tags:
+    - vivado
+  stage: bitstreams
+  only:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /\[fbit\]/i
+  script:
+    - sudo ${VIVADO_PATH} -mode tcl -source /tools/generate_bitstream.tcl /root/project_axi/project_axi.xpr
+    - sudo cp -r /root/project_axi/project_axi.runs/ /home/gitlab-runner/builds/p9qpxhkY/0/root/nontrival-cpu/testbit/
+    #所有的vivado运行都要加sudo
+    - sudo chmod -R 777 /home/gitlab-runner/
+  artifacts:
+    paths:
+      - ./testbit/impl_1/soc_axi_lite_top.bit
+      - ./testbit/*/runme.log
+    when: always
+
+#pbit生成bit流测试
+perf_test_bitstream:
+  tags:
+    - vivado
+  stage: bitstreams
+  only:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /\[pbit\]/i
+      #test
+  script:
+    - sudo ${VIVADO_PATH} -mode tcl -source /tools/generate_bitstream.tcl /tools/project_perf/project_perf.xpr
+    - sudo cp -r /tools/project_perf/project_perf.runs/ /home/gitlab-runner/builds/p9qpxhkY/0/root/nontrival-cpu/testbit/
+    - sudo chmod -R 777 /home/gitlab-runner/
+  artifacts:
+    paths:
+      - ./testbit/impl_1/soc_axi_lite_top.bit
+      - ./testbit/*/runme.log
+    when: always
+
+#pre验证
+Pre_test:
+  tags:
+    - vivado
+  stage: PERF_TEST
+  only:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /\[pre\]/i
+      #test
+  script:
+    - sudo ${VIVADO_PATH} -mode tcl -source /tools/run_allbench_pre.tcl /tools/project_cache/project_perf.xpr
+    - sudo chmod -R 777 /home/gitlab-runner/
+    # - sudo ${VIVADO_PATH} -mode tcl -source /tools/generate_bitstream.tcl /tools/project_perf/project_perf.xpr
+    # - sudo cp -r /tools/project_perf/project_perf.runs/ /home/gitlab-runner/builds/p9qpxhkY/0/root/nontrival-cpu/testbit/
+    # - sudo chmod -R 777 /home/gitlab-runner/
+  # artifacts:
+  #   paths:
+  #     - ./testbit/impl_1/soc_axi_lite_top.bit
+  #     - ./testbit/*/runme.log
+  #   when: always
+# soc_bitstream:
+#   image: vivado:2018.3
+#   tags:
+#     - vivado
+#   stage: bitstreams
+#   only:
+#     variables:
+#       - $CI_COMMIT_MESSAGE =~ /\[soc bitstream\]/i
+#   script:
+#     - ${VIVADO_PATH} -mode tcl -source scripts/build_soc.tcl ${PROJECT_DIR}/${PROJECT_NAME}.xpr
+#   artifacts:
+#     paths:
+#       - ${PROJECT_DIR}/${PROJECT_NAME}.runs/impl_1/*.bit
+#       - ${PROJECT_DIR}/${PROJECT_NAME}.runs/impl_1/*.ltx
+#       - ${PROJECT_DIR}/${PROJECT_NAME}.runs/*/runme.log
+#     when: always
