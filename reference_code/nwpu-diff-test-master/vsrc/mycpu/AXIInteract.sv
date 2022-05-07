@@ -11,8 +11,8 @@
 // `include "CPU_Defines.svh"
 // `ifdef NEW_BRIDGE
 // module AXIInteract #(
-//     parameter ICACHE_LINE_SIZE=4,//icache块大小
-//     parameter DCACHE_LINE_SIZE=4 //dcache块大小
+//     parameter ICACHE_LINE_SIZE=4,//icache块大�?
+//     parameter DCACHE_LINE_SIZE=4 //dcache块大�?
 // ) (
 //     //external signals
 //     input logic clk,
@@ -238,13 +238,13 @@
 //         UNCACHE_WAIT_WB,
 //         UNCACHE_WAIT_WBRESP,
 //         UNCACHE_FINISH
-//     } uncache_t;//通用的uncache机制 icache可能读 dcache会读会写
+//     } uncache_t;//通用的uncache机制 icache可能�? dcache会读会写
 
 
 
-// //TODO: 如果要实现预取 在这边改×2
-//     localparam int  ICACHE_CNT_WIDTH = $clog2(ICACHE_LINE_SIZE);//icache的计数器的位宽 
-//     localparam int  DCACHE_CNT_WIDTH = $clog2(DCACHE_LINE_SIZE);//dcache的计数器的位宽
+// //TODO: 如果要实现预�? 在这边改×2
+//     localparam int  ICACHE_CNT_WIDTH = $clog2(ICACHE_LINE_SIZE);//icache的计数器的位�? 
+//     localparam int  DCACHE_CNT_WIDTH = $clog2(DCACHE_LINE_SIZE);//dcache的计数器的位�?
 
 //     cache_rd_t istate,istate_next;//icache 读状态机
 //     cache_rd_t dstate,dstate_next;//dcache 读状态机
@@ -252,22 +252,22 @@
 // //  cache_wb_t istate_wb,istate_wb_next;
 //     cache_wb_t dstate_wb,dstate_wb_next;
 
-// //  uncache_t istate_uncache,istate_uncache_next; 暂时不实现 icache的uncache
+// //  uncache_t istate_uncache,istate_uncache_next; 暂时不实�? icache的uncache
 //     uncache_t dstate_uncache,dstate_uncache_next;
 //     uncache_t istate_uncache,istate_uncache_next;
 
 //     logic [ICACHE_CNT_WIDTH-1:0] iburst_cnt,iburst_cnt_next;//读计数器
-//     logic [DCACHE_CNT_WIDTH-1:0] dburst_cnt,dburst_cnt_next;//dcache计数器
+//     logic [DCACHE_CNT_WIDTH-1:0] dburst_cnt,dburst_cnt_next;//dcache计数�?
 
 //     logic [DCACHE_CNT_WIDTH-1:0] wb_dburst_cnt,wb_dburst_cnt_next;//写计数器
-// //TODO: 如果要实现预取 这边下面的line_recv*2
-// //icache读 使用数据
+// //TODO: 如果要实现预�? 这边下面的line_recv*2
+// //icache�? 使用数据
 //     logic [31:0] icache_rd_addr;
 //     logic [ICACHE_LINE_SIZE-1:0][31:0] icache_line_recv;//读的块大小为两倍的cache line size
-// //dcache读 使用数据
+// //dcache�? 使用数据
 //     logic [31:0] dcache_rd_addr;
 //     logic [DCACHE_LINE_SIZE-1:0][31:0] dcache_line_recv;
-// //dcache写 使用数据
+// //dcache�? 使用数据
 //     logic [31:0] dcache_wb_addr;
 //     logic [DCACHE_LINE_SIZE-1:0][31:0] dcache_line_wb;
 // //uncache读写 使用数据
@@ -277,7 +277,7 @@
 //     logic [31:0] uncache_line_wb;
 //     logic [3:0]    uncache_wstrb;
 //     LoadType    uncache_loadType; 
-// //uncache读 读取数据
+// //uncache�? 读取数据
 //     logic [31:0] uncache_i_addr;
 //     logic [31:0] uncache_i_line;
 
@@ -322,7 +322,7 @@
 //         endcase
 //     end
 
-// // icache读计数器  如果不在req状态计数器将清零
+// // icache读计数器  如果不在req状态计数器将清�?
 //     always_ff @(posedge clk ) begin : iburst_cnt_block
 //         if (resetn == `RstEnable | istate==REQ ) begin
 //             iburst_cnt <= '0;
@@ -338,7 +338,7 @@
 //             iburst_cnt_next = iburst_cnt;
 //         end
 //     end
-// //对于icache读地址的控制
+// //对于icache读地址的控�?
 //     always_ff @(posedge clk ) begin : icache_rd_addr_block
 //         if (resetn == `RstEnable) begin
 //             icache_rd_addr <='0;
@@ -348,7 +348,7 @@
 //             icache_rd_addr <= ibus.rd_addr;
 //         end
 //     end
-// //对于icache读出数据的锁存
+// //对于icache读出数据的锁�?
 //     always_ff @(posedge clk ) begin : icache_line_recv_block
 //         if (resetn == `RstEnable) begin
 //             icache_line_recv <='0;
@@ -360,7 +360,7 @@
 // //********************* ibus ******************/
 //     // master -> slave
 //     assign ibus_arid      = '0;
-//     assign ibus_arlen     = ICACHE_LINE_SIZE-1;      // 传输4拍
+//     assign ibus_arlen     = ICACHE_LINE_SIZE-1;      // 传输4�?
 //     assign ibus_arsize    = 3'b010;       // 每次传输4字节
 //     assign ibus_arburst   = 2'b01;
 //     assign ibus_arlock    = '0;
@@ -385,12 +385,12 @@
 //     assign ibus_wlast     = '0;
 //     assign ibus_wvalid    = '0;
 //     assign ibus_bready    = '0;
-//     //发送命令
+//     //发送命�?
 //     assign ibus_arvalid   = (istate == REQ) ? 1'b1 : 1'b0;
 //     assign ibus_araddr    = icache_rd_addr;
 //     assign ibus_rready    = (istate == WAIT) ? 1'b1 : 1'b0;
 
-//     //ibus上的赋值
+//     //ibus上的赋�?
 //     assign ibus.ret_valid = (istate == FINISH) ? 1'b1 : 1'b0;
 //     assign ibus.ret_data  = icache_line_recv;
 
@@ -437,7 +437,7 @@
 //         endcase
 //     end
 
-// // icache读计数器  如果不在req状态计数器将清零
+// // icache读计数器  如果不在req状态计数器将清�?
 //     always_ff @(posedge clk ) begin : dburst_cnt_block
 //         if (resetn == `RstEnable || dstate==REQ ) begin
 //             dburst_cnt <= '0;
@@ -453,7 +453,7 @@
 //             dburst_cnt_next = dburst_cnt;
 //         end
 //     end
-// //对于dcache读地址的控制
+// //对于dcache读地址的控�?
 //     always_ff @(posedge clk ) begin : dcache_rd_addr_block
 //         if (resetn == `RstEnable) begin
 //             dcache_rd_addr <='0;
@@ -463,7 +463,7 @@
 //             dcache_rd_addr <= dbus.rd_addr;
 //         end
 //     end
-// //对于dcache读出数据的锁存
+// //对于dcache读出数据的锁�?
 //     always_ff @(posedge clk ) begin : dcache_line_recv_block
 //         if (resetn == `RstEnable) begin
 //             dcache_line_recv <='0;
@@ -472,7 +472,7 @@
 //         end
 //     end
 // /********************* dbus ******************/
-//     assign dbus_arid      = 4'b0001;//TODO: 在有写缓冲的情况下 需要考虑id
+//     assign dbus_arid      = 4'b0001;//TODO: 在有写缓冲的情况�? 需要考虑id
 //     assign dbus_arlen     = DCACHE_LINE_SIZE-1;//一次读两个cache line
 //     assign dbus_arsize    = 3'b010;
 //     assign dbus_arburst   = 2'b01;
@@ -494,7 +494,7 @@
 //     assign dbus_wstrb     = 4'b1111;
 //     assign dbus_bready    = 1'b1;
 
-//     //发送命令
+//     //发送命�?
 //     assign dbus_arvalid   = (dstate == REQ) ? 1'b1 :1'b0;
 //     assign dbus_araddr    = dcache_rd_addr;
 //     assign dbus_rready    = (dstate == WAIT) ? 1'b1 : 1'b0;
@@ -503,12 +503,12 @@
 //     assign dbus_awvalid   = (dstate_wb== WB_REQ)?1'b1:1'b0;
 //     assign dbus_awaddr    = dcache_wb_addr;
 //     assign dbus_wvalid    = (dstate_wb== WB_WAIT)?1'b1:1'b0;;
-//     //dbus上的赋值
+//     //dbus上的赋�?
 //     assign dbus.ret_valid = (dstate == FINISH)? 1'b1:1'b0;
 //     assign dbus.ret_data  = dcache_line_recv;
 //     assign dbus.wr_valid  = (dstate_wb == WB_FINISH)? 1'b1 :1'b0; 
 
-// //dcache写状态机 因为write buffer的存在 所以没法和uncache共用一个通道
+// //dcache写状态机 因为write buffer的存�? 所以没法和uncache共用一个通道
 //     always_ff @( posedge clk ) begin : dstate_wb_block
 //         if (resetn == `RstEnable) begin
 //             dstate_wb <=  WB_IDLE;
@@ -556,7 +556,7 @@
 //         endcase
 //     end
 
-// //dcache 写计数器 如果不在req状态 计数器将被清零
+// //dcache 写计数器 如果不在req状�? 计数器将被清�?
 //     always_ff @( posedge clk ) begin : wb_dburst_cnt_block
 //         if (resetn == `RstEnable | dstate_wb==WB_REQ) begin
 //             wb_dburst_cnt <= '0;
@@ -572,7 +572,7 @@
 //             wb_dburst_cnt_next = wb_dburst_cnt;
 //         end
 //     end
-// //对dcache写地址的控制
+// //对dcache写地址的控�?
 //     always_ff @( posedge clk ) begin : dcache_wb_addr_block
 //         if (resetn == `RstEnable) begin
 //             dcache_wb_addr <='0;
@@ -594,7 +594,7 @@
 //     end
 // /********************* uibus ******************/
 //     assign uibus_arid     = 4'b1001;
-//     assign uibus_arlen    = 4'b0000; // 传输事件只有一个
+//     assign uibus_arlen    = 4'b0000; // 传输事件只有一�?
 //     // assign ubus_arsize   = 3'b010; // 4字节
 //     assign uibus_arsize   = 3'b010;//lw          // 根据LB LH LW调整Uncache的arsize  
 //     assign uibus_arburst  = 2'b01;
@@ -604,7 +604,7 @@
 
 
 //     assign uibus_awid     = 4'b1001;
-//     assign uibus_awlen    = 4'b0000;        // 传输1次
+//     assign uibus_awlen    = 4'b0000;        // 传输1�?
 //     assign uibus_awsize   = 3'b010;         // 传输32bit 
 //     assign uibus_awburst  = 2'b01;          // increase模式
 //     assign uibus_awlock   = '0;
@@ -626,13 +626,13 @@
 //     assign uibus_awaddr   = '0;
 //     assign uibus_wvalid   = (istate_uncache==UNCACHE_WAIT_WB)?1'b1:1'b0;
 
-//     //udbus的赋值
+//     //udbus的赋�?
 //     assign uibus.wr_valid = (istate_uncache==UNCACHE_FINISH)?1'b1:1'b0;
 //     assign uibus.ret_valid= (istate_uncache==UNCACHE_FINISH)?1'b1:1'b0;
 //     assign uibus.ret_data = uncache_i_line;
 // /********************* udbus ******************/
 //     assign udbus_arid     = 4'b0011;
-//     assign udbus_arlen    = 4'b0000; // 传输事件只有一个
+//     assign udbus_arlen    = 4'b0000; // 传输事件只有一�?
 //     // assign ubus_arsize   = 3'b010; // 4字节
 //     assign udbus_arsize   = (udbus.loadType.size == 2'b10) ? 3'b000: // lb
 //                            (udbus.loadType.size == 2'b01) ? 3'b001: // lh
@@ -644,7 +644,7 @@
 
 
 //     assign udbus_awid     = 4'b0011;
-//     assign udbus_awlen    = 4'b0000;        // 传输1次
+//     assign udbus_awlen    = 4'b0000;        // 传输1�?
 //     assign udbus_awsize   = 3'b010;         // 传输32bit 
 //     assign udbus_awburst  = 2'b01;          // increase模式
 //     assign udbus_awlock   = '0;
@@ -666,13 +666,13 @@
 //     assign udbus_awaddr   = uncache_addr_wb;
 //     assign udbus_wvalid   = (dstate_uncache==UNCACHE_WAIT_WB)?1'b1:1'b0;
 
-//     //udbus的赋值
+//     //udbus的赋�?
 //     assign udbus.wr_valid = (dstate_uncache==UNCACHE_FINISH)?1'b1:1'b0;
 //     assign udbus.ret_valid= (dstate_uncache==UNCACHE_FINISH)?1'b1:1'b0;
 //     assign udbus.ret_data = uncache_line_rd;
 
 
-//     //空闲信号的输出
+//     //空闲信号的输�?
 //     assign ibus.rd_rdy  = (istate == IDLE ) ? 1'b1 : 1'b0;
 //     assign ibus.wr_rdy  = 1'b0;
 //     assign dbus.rd_rdy  = (dstate == IDLE ) ? 1'b1 : 1'b0;
@@ -703,14 +703,14 @@
 //                     istate_uncache_next =UNCACHE_IDLE;
 //                 end
 //             end 
-//             UNCACHE_RD:begin//发起读请求
+//             UNCACHE_RD:begin//发起读请�?
 //                 if (uibus_arready ) begin
 //                     istate_uncache_next =UNCACHE_WAIT_RD;
 //                 end else begin
 //                     istate_uncache_next =UNCACHE_RD;
 //                 end
 //             end
-//             UNCACHE_WB:begin//发起写请求
+//             UNCACHE_WB:begin//发起写请�?
 //                 if (uibus_awready ) begin
 //                     istate_uncache_next =UNCACHE_WAIT_WB;
 //                 end else begin
@@ -769,14 +769,14 @@
 //                     dstate_uncache_next =UNCACHE_IDLE;
 //                 end
 //             end 
-//             UNCACHE_RD:begin//发起读请求
+//             UNCACHE_RD:begin//发起读请�?
 //                 if (udbus_arready ) begin
 //                     dstate_uncache_next =UNCACHE_WAIT_RD;
 //                 end else begin
 //                     dstate_uncache_next =UNCACHE_RD;
 //                 end
 //             end
-//             UNCACHE_WB:begin//发起写请求
+//             UNCACHE_WB:begin//发起写请�?
 //                 if (udbus_awready ) begin
 //                     dstate_uncache_next =UNCACHE_WAIT_WB;
 //                 end else begin
@@ -978,8 +978,8 @@
 // module AXIInteract(
 //     input logic clk,
 //     input logic resetn,
-//     AXI_Bus_Interface  DcacheAXIBus,  // AXI模块向外输出的接口
-//     AXI_Bus_Interface  IcacheAXIBus,  // AXI模块向外输出的接口
+//     AXI_Bus_Interface  DcacheAXIBus,  // AXI模块向外输出的接�?
+//     AXI_Bus_Interface  IcacheAXIBus,  // AXI模块向外输出的接�?
 //     AXI_UNCACHE_Interface UncacheAXIBus,
 
 //     output logic [ 3: 0] m_axi_arid,
@@ -1287,7 +1287,7 @@
 // /********************* ibus ******************/
 //     // master -> slave
 //     assign ibus_arid     = 4'b0000;
-//     assign ibus_arlen    = 4'b0011;      // 传输4拍
+//     assign ibus_arlen    = 4'b0011;      // 传输4�?
 //     assign ibus_arsize   = 3'b010;       // 每次传输4字节
 //     assign ibus_arburst  = 2'b01;
 //     assign ibus_arlock   = 2'b00;
@@ -1325,7 +1325,7 @@
 
 
 //     assign dbus_awid     = 4'b0001;
-//     assign dbus_awlen    = 4'b0011;        // 传输4次
+//     assign dbus_awlen    = 4'b0011;        // 传输4�?
 //     assign dbus_awsize   = 3'b010;         // 传输32bit 
 //     assign dbus_awburst  = 2'b01;          // increase模式
 //     assign dbus_awlock   = '0;
@@ -1339,7 +1339,7 @@
 
 // /********************* ubus ******************/
 //     assign ubus_arid     = 4'b0011;
-//     assign ubus_arlen    = 4'b0000; // 传输事件只有一个
+//     assign ubus_arlen    = 4'b0000; // 传输事件只有一�?
 //     // assign ubus_arsize   = 3'b010; // 4字节
 //     assign ubus_arsize   = (U_RD_LoadType.size == 2'b10) ? 3'b000: // lb
 //                            (U_RD_LoadType.size == 2'b01) ? 3'b001: // lh
@@ -1351,7 +1351,7 @@
 
 
 //     assign ubus_awid     = 4'b0011;
-//     assign ubus_awlen    = 4'b0000;        // 传输1次
+//     assign ubus_awlen    = 4'b0000;        // 传输1�?
 //     assign ubus_awsize   = 3'b010;         // 传输32bit 
 //     assign ubus_awburst  = 2'b01;          // increase模式
 //     assign ubus_awlock   = '0;
@@ -1363,7 +1363,7 @@
 //     assign ubus_wstrb   = U_WR_Wstrb;  // 使用所存下来的信号。以支持uncache的SB
 //     assign ubus_bready  = 1'b1;
 
-//     // 空闲信号的输出
+//     // 空闲信号的输�?
 //     assign IcacheAXIBus. rd_rdy  = (I_RD_pre_state == I_RD_EMPTY ) ? 1'b1 : 1'b0;
 //     assign IcacheAXIBus. wr_rdy  = 1'b0;
 //     assign DcacheAXIBus. rd_rdy  = (D_RD_pre_state == D_RD_EMPTY ) ? 1'b1 : 1'b0;
@@ -1382,8 +1382,8 @@
 //         end
 //     end
 
-//     // 状态转移
-//     // 因为AXI的握手在时钟沿上，所以在状态转移里面加入了I_RD_DataReady 用于burst数据的拼接
+//     // 状态转�?
+//     // 因为AXI的握手在时钟沿上，所以在状态转移里面加入了I_RD_DataReady 用于burst数据的拼�?
 //     always_comb begin
 //         unique case (I_RD_pre_state)
 //             I_RD_EMPTY:begin
@@ -1492,7 +1492,7 @@
 //             IcacheAXIBus.ret_data = '0;
 //         end
 //     end
-//     // AXI brust数据的获取
+//     // AXI brust数据的获�?
 //     always_ff @(posedge clk) begin
 //         if (resetn == `RstEnable) begin
 //             AXI_I_RData  <= 128'b0; 
@@ -1531,8 +1531,8 @@
 //         end
 //     end
 
-//     // 状态转移
-//     // 因为AXI的握手在时钟沿上，所以在状态转移里面加入了D_RD_DataReady 用于burst数据的拼接
+//     // 状态转�?
+//     // 因为AXI的握手在时钟沿上，所以在状态转移里面加入了D_RD_DataReady 用于burst数据的拼�?
 //     always_comb begin
 //         unique case (D_RD_pre_state)
 //             D_RD_EMPTY:begin
@@ -1641,7 +1641,7 @@
 //             DcacheAXIBus.ret_data = '0;
 //         end
 //     end
-//     // AXI brust数据的获取
+//     // AXI brust数据的获�?
 //     always_ff @(posedge clk) begin
 //         if (resetn == `RstEnable) begin
 //             AXI_D_RData  <= 128'b0; 
@@ -1679,8 +1679,8 @@
 //         end
 //     end
 
-//     // 状态转移
-//     // axi写模式下 同时置 valid & wdata 
+//     // 状态转�?
+//     // axi写模式下 同时�? valid & wdata 
 //     always_comb begin
 //         unique case (D_WR_pre_state)
 //             D_WR_EMPTY:begin
@@ -1806,7 +1806,7 @@
 //         end
 //     end
 
-//     // 状态转移
+//     // 状态转�?
 //     always_comb begin
 //         unique case (U_RD_pre_state)
 //             U_RD_EMPTY:begin
@@ -1878,7 +1878,7 @@
 //             UncacheAXIBus.ret_data  = '0;
 //         end
 //     end
-//     // AXI brust数据的获取
+//     // AXI brust数据的获�?
 //     always_ff @(posedge clk) begin
 //         if (resetn == `RstEnable) begin
 //             AXI_U_RData  <= 32'b0; 
@@ -1898,7 +1898,7 @@
 //         end
 //     end
 
-//     // 状态转移
+//     // 状态转�?
 //     always_comb begin
 //         unique case (U_WR_pre_state)
 //             U_WR_EMPTY:begin
@@ -2076,8 +2076,8 @@
 `include "/mnt/soc_run_os/vsim-func/vsrc/mycpu/AXI_Packed.svh"
 `ifdef NEW_BRIDGE
 module AXIInteract #(
-    parameter ICACHE_LINE_SIZE=4,//icache块大小
-    parameter DCACHE_LINE_SIZE=4 //dcache块大小
+    parameter ICACHE_LINE_SIZE=4,//icache块大�?
+    parameter DCACHE_LINE_SIZE=4 //dcache块大�?
 ) (
     //external signals
     input logic clk,
@@ -2318,13 +2318,13 @@ module AXIInteract #(
         UNCACHE_WAIT_WB,
         UNCACHE_WAIT_WBRESP,
         UNCACHE_FINISH
-    } uncache_t;//通用的uncache机制 icache可能读 dcache会读会写
+    } uncache_t;//通用的uncache机制 icache可能�? dcache会读会写
 
 
 
-//TODO: 如果要实现预取 在这边改×2
-    localparam int  ICACHE_CNT_WIDTH = $clog2(ICACHE_LINE_SIZE);//icache的计数器的位宽 
-    localparam int  DCACHE_CNT_WIDTH = $clog2(DCACHE_LINE_SIZE);//dcache的计数器的位宽
+//TODO: 如果要实现预�? 在这边改×2
+    localparam int  ICACHE_CNT_WIDTH = $clog2(ICACHE_LINE_SIZE);//icache的计数器的位�? 
+    localparam int  DCACHE_CNT_WIDTH = $clog2(DCACHE_LINE_SIZE);//dcache的计数器的位�?
 
     cache_rd_t istate,istate_next;//icache 读状态机
     cache_rd_t dstate,dstate_next;//dcache 读状态机
@@ -2332,22 +2332,22 @@ module AXIInteract #(
 //  cache_wb_t istate_wb,istate_wb_next;
     cache_wb_t dstate_wb,dstate_wb_next;
 
-//  uncache_t istate_uncache,istate_uncache_next; 暂时不实现 icache的uncache
+//  uncache_t istate_uncache,istate_uncache_next; 暂时不实�? icache的uncache
     uncache_t dstate_uncache,dstate_uncache_next;
     uncache_t istate_uncache,istate_uncache_next;
 
     logic [ICACHE_CNT_WIDTH-1:0] iburst_cnt,iburst_cnt_next;//读计数器
-    logic [DCACHE_CNT_WIDTH-1:0] dburst_cnt,dburst_cnt_next;//dcache计数器
+    logic [DCACHE_CNT_WIDTH-1:0] dburst_cnt,dburst_cnt_next;//dcache计数�?
 
     logic [DCACHE_CNT_WIDTH-1:0] wb_dburst_cnt,wb_dburst_cnt_next;//写计数器
-//TODO: 如果要实现预取 这边下面的line_recv*2
-//icache读 使用数据
+//TODO: 如果要实现预�? 这边下面的line_recv*2
+//icache�? 使用数据
     logic [31:0] icache_rd_addr;
     logic [ICACHE_LINE_SIZE-1:0][31:0] icache_line_recv;//读的块大小为两倍的cache line size
-//dcache读 使用数据
+//dcache�? 使用数据
     logic [31:0] dcache_rd_addr;
     logic [DCACHE_LINE_SIZE-1:0][31:0] dcache_line_recv;
-//dcache写 使用数据
+//dcache�? 使用数据
     logic [31:0] dcache_wb_addr;
     logic [DCACHE_LINE_SIZE-1:0][31:0] dcache_line_wb;
 //uncache读写 使用数据
@@ -2357,7 +2357,7 @@ module AXIInteract #(
     logic [31:0] uncache_line_wb;
     logic [3:0]    uncache_wstrb;
     LoadType    uncache_loadType; 
-//uncache读 读取数据
+//uncache�? 读取数据
     logic [31:0] uncache_i_addr;
     logic [31:0] uncache_i_line;
 
@@ -2402,7 +2402,7 @@ module AXIInteract #(
         endcase
     end
 
-// icache读计数器  如果不在req状态计数器将清零
+// icache读计数器  如果不在req状态计数器将清�?
     always_ff @(posedge clk ) begin : iburst_cnt_block
         if (resetn == `RstEnable | istate==REQ ) begin
             iburst_cnt <= '0;
@@ -2418,7 +2418,7 @@ module AXIInteract #(
             iburst_cnt_next = iburst_cnt;
         end
     end
-//对于icache读地址的控制
+//对于icache读地址的控�?
     always_ff @(posedge clk ) begin : icache_rd_addr_block
         if (resetn == `RstEnable) begin
             icache_rd_addr <='0;
@@ -2428,7 +2428,7 @@ module AXIInteract #(
             icache_rd_addr <= ibus.rd_addr;
         end
     end
-//对于icache读出数据的锁存
+//对于icache读出数据的锁�?
     always_ff @(posedge clk ) begin : icache_line_recv_block
         if (resetn == `RstEnable) begin
             icache_line_recv <='0;
@@ -2440,7 +2440,7 @@ module AXIInteract #(
 //********************* ibus ******************/
     // master -> slave
     assign ibus_arid      = '0;
-    assign ibus_arlen     = ICACHE_LINE_SIZE-1;      // 传输4拍
+    assign ibus_arlen     = ICACHE_LINE_SIZE-1;      // 传输4�?
     assign ibus_arsize    = 3'b010;       // 每次传输4字节
     assign ibus_arburst   = 2'b01;
     assign ibus_arlock    = '0;
@@ -2465,12 +2465,12 @@ module AXIInteract #(
     assign ibus_wlast     = '0;
     assign ibus_wvalid    = '0;
     assign ibus_bready    = '0;
-    //发送命令
+    //发送命�?
     assign ibus_arvalid   = (istate == REQ) ? 1'b1 : 1'b0;
     assign ibus_araddr    = icache_rd_addr;
     assign ibus_rready    = (istate == WAIT) ? 1'b1 : 1'b0;
 
-    //ibus上的赋值
+    //ibus上的赋�?
     assign ibus.ret_valid = (istate == FINISH) ? 1'b1 : 1'b0;
     assign ibus.ret_data  = icache_line_recv;
 
@@ -2517,7 +2517,7 @@ module AXIInteract #(
         endcase
     end
 
-// icache读计数器  如果不在req状态计数器将清零
+// icache读计数器  如果不在req状态计数器将清�?
     always_ff @(posedge clk ) begin : dburst_cnt_block
         if (resetn == `RstEnable || dstate==REQ ) begin
             dburst_cnt <= '0;
@@ -2533,7 +2533,7 @@ module AXIInteract #(
             dburst_cnt_next = dburst_cnt;
         end
     end
-//对于dcache读地址的控制
+//对于dcache读地址的控�?
     always_ff @(posedge clk ) begin : dcache_rd_addr_block
         if (resetn == `RstEnable) begin
             dcache_rd_addr <='0;
@@ -2543,7 +2543,7 @@ module AXIInteract #(
             dcache_rd_addr <= dbus.rd_addr;
         end
     end
-//对于dcache读出数据的锁存
+//对于dcache读出数据的锁�?
     always_ff @(posedge clk ) begin : dcache_line_recv_block
         if (resetn == `RstEnable) begin
             dcache_line_recv <='0;
@@ -2552,7 +2552,7 @@ module AXIInteract #(
         end
     end
 /********************* dbus ******************/
-    assign dbus_arid      = 4'b0001;//TODO: 在有写缓冲的情况下 需要考虑id
+    assign dbus_arid      = 4'b0001;//TODO: 在有写缓冲的情况�? 需要考虑id
     assign dbus_arlen     = DCACHE_LINE_SIZE-1;//一次读两个cache line
     assign dbus_arsize    = 3'b010;
     assign dbus_arburst   = 2'b01;
@@ -2574,7 +2574,7 @@ module AXIInteract #(
     assign dbus_wstrb     = 4'b1111;
     assign dbus_bready    = 1'b1;
 
-    //发送命令
+    //发送命�?
     assign dbus_arvalid   = (dstate == REQ) ? 1'b1 :1'b0;
     assign dbus_araddr    = dcache_rd_addr;
     assign dbus_rready    = (dstate == WAIT) ? 1'b1 : 1'b0;
@@ -2583,12 +2583,12 @@ module AXIInteract #(
     assign dbus_awvalid   = (dstate_wb== WB_REQ)?1'b1:1'b0;
     assign dbus_awaddr    = dcache_wb_addr;
     assign dbus_wvalid    = (dstate_wb== WB_WAIT)?1'b1:1'b0;;
-    //dbus上的赋值
+    //dbus上的赋�?
     assign dbus.ret_valid = (dstate == FINISH)? 1'b1:1'b0;
     assign dbus.ret_data  = dcache_line_recv;
     assign dbus.wr_valid  = (dstate_wb == WB_FINISH)? 1'b1 :1'b0; 
 
-//dcache写状态机 因为write buffer的存在 所以没法和uncache共用一个通道
+//dcache写状态机 因为write buffer的存�? 所以没法和uncache共用一个通道
     always_ff @( posedge clk ) begin : dstate_wb_block
         if (resetn == `RstEnable) begin
             dstate_wb <=  WB_IDLE;
@@ -2636,7 +2636,7 @@ module AXIInteract #(
         endcase
     end
 
-//dcache 写计数器 如果不在req状态 计数器将被清零
+//dcache 写计数器 如果不在req状�? 计数器将被清�?
     always_ff @( posedge clk ) begin : wb_dburst_cnt_block
         if (resetn == `RstEnable | dstate_wb==WB_REQ) begin
             wb_dburst_cnt <= '0;
@@ -2652,7 +2652,7 @@ module AXIInteract #(
             wb_dburst_cnt_next = wb_dburst_cnt;
         end
     end
-//对dcache写地址的控制
+//对dcache写地址的控�?
     always_ff @( posedge clk ) begin : dcache_wb_addr_block
         if (resetn == `RstEnable) begin
             dcache_wb_addr <='0;
@@ -2674,7 +2674,7 @@ module AXIInteract #(
     end
 /********************* uibus ******************/
     assign uibus_arid     = 4'b1001;
-    assign uibus_arlen    = 4'b0000; // 传输事件只有一个
+    assign uibus_arlen    = 4'b0000; // 传输事件只有一�?
     // assign ubus_arsize   = 3'b010; // 4字节
     assign uibus_arsize   = 3'b010;//lw          // 根据LB LH LW调整Uncache的arsize  
     assign uibus_arburst  = 2'b01;
@@ -2684,7 +2684,7 @@ module AXIInteract #(
 
 
     assign uibus_awid     = 4'b1001;
-    assign uibus_awlen    = 4'b0000;        // 传输1次
+    assign uibus_awlen    = 4'b0000;        // 传输1�?
     assign uibus_awsize   = 3'b010;         // 传输32bit 
     assign uibus_awburst  = 2'b01;          // increase模式
     assign uibus_awlock   = '0;
@@ -2706,13 +2706,13 @@ module AXIInteract #(
     assign uibus_awaddr   = '0;
     assign uibus_wvalid   = (istate_uncache==UNCACHE_WAIT_WB)?1'b1:1'b0;
 
-    //udbus的赋值
+    //udbus的赋�?
     assign uibus.wr_valid = (istate_uncache==UNCACHE_FINISH)?1'b1:1'b0;
     assign uibus.ret_valid= (istate_uncache==UNCACHE_FINISH)?1'b1:1'b0;
     assign uibus.ret_data = uncache_i_line;
 /********************* udbus ******************/
     assign udbus_arid     = 4'b0011;
-    assign udbus_arlen    = 4'b0000; // 传输事件只有一个
+    assign udbus_arlen    = 4'b0000; // 传输事件只有一�?
     // assign ubus_arsize   = 3'b010; // 4字节
     assign udbus_arsize   = (udbus.loadType.size == 2'b10) ? 3'b000: // lb
                            (udbus.loadType.size == 2'b01) ? 3'b001: // lh
@@ -2724,7 +2724,7 @@ module AXIInteract #(
 
 
     assign udbus_awid     = 4'b0011;
-    assign udbus_awlen    = 4'b0000;        // 传输1次
+    assign udbus_awlen    = 4'b0000;        // 传输1�?
     assign udbus_awsize   = 3'b010;         // 传输32bit 
     assign udbus_awburst  = 2'b01;          // increase模式
     assign udbus_awlock   = '0;
@@ -2746,13 +2746,13 @@ module AXIInteract #(
     assign udbus_awaddr   = uncache_addr_wb;
     assign udbus_wvalid   = (dstate_uncache==UNCACHE_WAIT_WB)?1'b1:1'b0;
 
-    //udbus的赋值
+    //udbus的赋�?
     assign udbus.wr_valid = (dstate_uncache==UNCACHE_FINISH)?1'b1:1'b0;
     assign udbus.ret_valid= (dstate_uncache==UNCACHE_FINISH)?1'b1:1'b0;
     assign udbus.ret_data = uncache_line_rd;
 
 
-    //空闲信号的输出
+    //空闲信号的输�?
     assign ibus.rd_rdy  = (istate == IDLE ) ? 1'b1 : 1'b0;
     assign ibus.wr_rdy  = 1'b0;
     assign dbus.rd_rdy  = (dstate == IDLE ) ? 1'b1 : 1'b0;
@@ -2783,14 +2783,14 @@ module AXIInteract #(
                     istate_uncache_next =UNCACHE_IDLE;
                 end
             end 
-            UNCACHE_RD:begin//发起读请求
+            UNCACHE_RD:begin//发起读请�?
                 if (uibus_arready ) begin
                     istate_uncache_next =UNCACHE_WAIT_RD;
                 end else begin
                     istate_uncache_next =UNCACHE_RD;
                 end
             end
-            UNCACHE_WB:begin//发起写请求
+            UNCACHE_WB:begin//发起写请�?
                 if (uibus_awready ) begin
                     istate_uncache_next =UNCACHE_WAIT_WB;
                 end else begin
@@ -2849,14 +2849,14 @@ module AXIInteract #(
                     dstate_uncache_next =UNCACHE_IDLE;
                 end
             end 
-            UNCACHE_RD:begin//发起读请求
+            UNCACHE_RD:begin//发起读请�?
                 if (udbus_arready ) begin
                     dstate_uncache_next =UNCACHE_WAIT_RD;
                 end else begin
                     dstate_uncache_next =UNCACHE_RD;
                 end
             end
-            UNCACHE_WB:begin//发起写请求
+            UNCACHE_WB:begin//发起写请�?
                 if (udbus_awready ) begin
                     dstate_uncache_next =UNCACHE_WAIT_WB;
                 end else begin
@@ -3271,8 +3271,8 @@ endmodule
 module AXIInteract(
     input logic clk,
     input logic resetn,
-    AXI_Bus_Interface  DcacheAXIBus,  // AXI模块向外输出的接口
-    AXI_Bus_Interface  IcacheAXIBus,  // AXI模块向外输出的接口
+    AXI_Bus_Interface  DcacheAXIBus,  // AXI模块向外输出的接�?
+    AXI_Bus_Interface  IcacheAXIBus,  // AXI模块向外输出的接�?
     AXI_UNCACHE_Interface UncacheAXIBus,
 
     output logic [ 3: 0] m_axi_arid,
@@ -3580,7 +3580,7 @@ module AXIInteract(
 /********************* ibus ******************/
     // master -> slave
     assign ibus_arid     = 4'b0000;
-    assign ibus_arlen    = 4'b0011;      // 传输4拍
+    assign ibus_arlen    = 4'b0011;      // 传输4�?
     assign ibus_arsize   = 3'b010;       // 每次传输4字节
     assign ibus_arburst  = 2'b01;
     assign ibus_arlock   = 2'b00;
@@ -3618,7 +3618,7 @@ module AXIInteract(
 
 
     assign dbus_awid     = 4'b0001;
-    assign dbus_awlen    = 4'b0011;        // 传输4次
+    assign dbus_awlen    = 4'b0011;        // 传输4�?
     assign dbus_awsize   = 3'b010;         // 传输32bit 
     assign dbus_awburst  = 2'b01;          // increase模式
     assign dbus_awlock   = '0;
@@ -3632,7 +3632,7 @@ module AXIInteract(
 
 /********************* ubus ******************/
     assign ubus_arid     = 4'b0011;
-    assign ubus_arlen    = 4'b0000; // 传输事件只有一个
+    assign ubus_arlen    = 4'b0000; // 传输事件只有一�?
     // assign ubus_arsize   = 3'b010; // 4字节
     assign ubus_arsize   = (U_RD_LoadType.size == 2'b10) ? 3'b000: // lb
                            (U_RD_LoadType.size == 2'b01) ? 3'b001: // lh
@@ -3644,7 +3644,7 @@ module AXIInteract(
 
 
     assign ubus_awid     = 4'b0011;
-    assign ubus_awlen    = 4'b0000;        // 传输1次
+    assign ubus_awlen    = 4'b0000;        // 传输1�?
     assign ubus_awsize   = 3'b010;         // 传输32bit 
     assign ubus_awburst  = 2'b01;          // increase模式
     assign ubus_awlock   = '0;
@@ -3656,7 +3656,7 @@ module AXIInteract(
     assign ubus_wstrb   = U_WR_Wstrb;  // 使用所存下来的信号。以支持uncache的SB
     assign ubus_bready  = 1'b1;
 
-    // 空闲信号的输出
+    // 空闲信号的输�?
     assign IcacheAXIBus. rd_rdy  = (I_RD_pre_state == I_RD_EMPTY ) ? 1'b1 : 1'b0;
     assign IcacheAXIBus. wr_rdy  = 1'b0;
     assign DcacheAXIBus. rd_rdy  = (D_RD_pre_state == D_RD_EMPTY ) ? 1'b1 : 1'b0;
@@ -3675,8 +3675,8 @@ module AXIInteract(
         end
     end
 
-    // 状态转移
-    // 因为AXI的握手在时钟沿上，所以在状态转移里面加入了I_RD_DataReady 用于burst数据的拼接
+    // 状态转�?
+    // 因为AXI的握手在时钟沿上，所以在状态转移里面加入了I_RD_DataReady 用于burst数据的拼�?
     always_comb begin
         unique case (I_RD_pre_state)
             I_RD_EMPTY:begin
@@ -3785,7 +3785,7 @@ module AXIInteract(
             IcacheAXIBus.ret_data = '0;
         end
     end
-    // AXI brust数据的获取
+    // AXI brust数据的获�?
     always_ff @(posedge clk) begin
         if (resetn == `RstEnable) begin
             AXI_I_RData  <= 128'b0; 
@@ -3824,8 +3824,8 @@ module AXIInteract(
         end
     end
 
-    // 状态转移
-    // 因为AXI的握手在时钟沿上，所以在状态转移里面加入了D_RD_DataReady 用于burst数据的拼接
+    // 状态转�?
+    // 因为AXI的握手在时钟沿上，所以在状态转移里面加入了D_RD_DataReady 用于burst数据的拼�?
     always_comb begin
         unique case (D_RD_pre_state)
             D_RD_EMPTY:begin
@@ -3934,7 +3934,7 @@ module AXIInteract(
             DcacheAXIBus.ret_data = '0;
         end
     end
-    // AXI brust数据的获取
+    // AXI brust数据的获�?
     always_ff @(posedge clk) begin
         if (resetn == `RstEnable) begin
             AXI_D_RData  <= 128'b0; 
@@ -3972,8 +3972,8 @@ module AXIInteract(
         end
     end
 
-    // 状态转移
-    // axi写模式下 同时置 valid & wdata 
+    // 状态转�?
+    // axi写模式下 同时�? valid & wdata 
     always_comb begin
         unique case (D_WR_pre_state)
             D_WR_EMPTY:begin
@@ -4099,7 +4099,7 @@ module AXIInteract(
         end
     end
 
-    // 状态转移
+    // 状态转�?
     always_comb begin
         unique case (U_RD_pre_state)
             U_RD_EMPTY:begin
@@ -4171,7 +4171,7 @@ module AXIInteract(
             UncacheAXIBus.ret_data  = '0;
         end
     end
-    // AXI brust数据的获取
+    // AXI brust数据的获�?
     always_ff @(posedge clk) begin
         if (resetn == `RstEnable) begin
             AXI_U_RData  <= 32'b0; 
@@ -4191,7 +4191,7 @@ module AXIInteract(
         end
     end
 
-    // 状态转移
+    // 状态转�?
     always_comb begin
         unique case (U_WR_pre_state)
             U_WR_EMPTY:begin
