@@ -17,16 +17,16 @@
 module cp0_reg (  
     input logic             clk,
     input logic             rst,
-    input logic  [5:0]      Interrupt,                 //6个外部硬件中断输入 
+    input logic  [5:0]      Interrupt,                 //6个外部硬件中断输�? 
     // read port        
     input logic  [4:0]      CP0_RdAddr,                //要读取的CP0寄存器的地址
-    output logic [31:0]     CP0_RdData,                //读出的CP0某个寄存器的值 
+    output logic [31:0]     CP0_RdData,                //读出的CP0某个寄存器的�? 
     //write port from reg
     input RegsWrType        MEM_RegsWrType,
     input logic  [4:0]      MEM_Dst,
     input logic  [31:0]     MEM_Result,
     //write port from tlb
-    input logic             MEM_IsTLBP,                //写index寄存器
+    input logic             MEM_IsTLBP,                //写index寄存�?
     input logic             MEM_IsTLBR,                //写EntryHi，EntryLo0，EntryLo1
     CP0_MMU_Interface       CMBus, 
     //exception
@@ -44,7 +44,7 @@ module cp0_reg (
     );
 
     logic                   Count2;
-    logic                   CP0_TimerInterrupt;         //是否有定时中断发生
+    logic                   CP0_TimerInterrupt;         //是否有定时中断发�?
     logic  [4:0]            ExcType;
     logic  [5:0]            Interrupt_final;
 
@@ -54,12 +54,12 @@ module cp0_reg (
     assign                  CP0_Cause_IP7_2  = CP0.Cause.IP7_2;
     assign                  CP0_Cause_IP1_0  = CP0.Cause.IP1_0;
     assign                  CP0_EPC          = CP0.EPC;
-    assign                  Interrupt_final  = Interrupt | {CP0_TimerInterrupt , 5'b0};  // 时钟中断号为IP7，在此标记
+    assign                  Interrupt_final  = Interrupt | {CP0_TimerInterrupt , 5'b0};  // 时钟中断号为IP7，在此标�?
 
     cp0_regs CP0;
     
 
-    always_comb begin  //优先级可以查看MIPS文档第三册56页
+    always_comb begin  //优先级可以查看MIPS文档第三�?56�?
         if(WB_ExceptType.Interrupt == 1'b1)                ExcType = `EX_Interrupt;
         else if(WB_ExceptType.WrongAddressinIF == 1'b1)    ExcType = `EX_WrongAddressinIF;
         else if(WB_ExceptType.TLBRefillinIF ==1'b1)        ExcType = `EX_TLBRefillinIF;
@@ -185,7 +185,7 @@ module cp0_reg (
             CP0.Count                      <= MEM_Result;
         end
         else if (Count2 == 1'd1)begin
-            CP0.Count                   <= CP0.Count + 1;   //Count寄存器的值在每个时钟周期加1
+            CP0.Count                   <= CP0.Count + 1;   //Count寄存器的值在每个时钟周期�?1
         end 
     end
     
