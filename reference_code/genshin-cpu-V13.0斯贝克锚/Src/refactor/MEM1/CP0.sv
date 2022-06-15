@@ -17,17 +17,17 @@
 module cp0_reg (  
     input logic             clk,
     input logic             rst,
-    input logic  [5:0]      Interrupt,                 //6个外部硬件中断输入 
+    input logic  [5:0]      Interrupt,                 //6个外部硬件中断输�? 
     input logic  [2:0]      CP0_Sel,
     // read port        
     input logic  [4:0]      CP0_RdAddr,                //要读取的CP0寄存器的地址
-    output logic [31:0]     CP0_RdData,                //读出的CP0某个寄存器的值 
+    output logic [31:0]     CP0_RdData,                //读出的CP0某个寄存器的�? 
     //write port from reg
     input RegsWrType        MEM_RegsWrType,
     input logic  [4:0]      MEM_Dst,
     input logic  [31:0]     MEM_Result,
     //write port from tlb
-    input logic             MEM_IsTLBP,                //写index寄存器
+    input logic             MEM_IsTLBP,                //写index寄存�?
     input logic             MEM_IsTLBR,                //写EntryHi，EntryLo0，EntryLo1
     CP0_TLB_Interface       CTBus, 
     //exception
@@ -65,9 +65,9 @@ module cp0_reg (
     // );
  
     
-    // 4096/4/8 = 128 ; 128 对应了3'd01
+    // 4096/4/8 = 128 ; 128 对应�?3'd01
     localparam int IC_SET_PER_WAY = 0;  
-    // 8个字 32个字节   ->3'd04
+    // 8个字 32个字�?   ->3'd04
     localparam int IC_LINE_SIZE   = 5;
     // I$ 组数 -> 减一
     localparam int IC_ASSOC       = 1;
@@ -78,7 +78,7 @@ module cp0_reg (
 
 
     logic                   Count2;
-    logic                   CP0_TimerInterrupt;         //是否有定时中断发生
+    logic                   CP0_TimerInterrupt;         //是否有定时中断发�?
     logic  [5:0]            Interrupt_final;
     logic  [31:0]           config0_default;
     logic  [2:0]            RandomAdd1;
@@ -115,7 +115,7 @@ module cp0_reg (
     assign                  CP0_EPC          = CP0.EPC;
     assign                  CP0_Ebase        = CP0.Ebase;
     assign                  CP0_Config_K0    = CP0.Config0[2:0];
-    assign                  Interrupt_final  = Interrupt | {CP0.Cause.TI , 5'b0};  // 时钟中断号为IP7，在此标记
+    assign                  Interrupt_final  = Interrupt | {CP0.Cause.TI , 5'b0};  // 时钟中断号为IP7，在此标�?
     assign                  config0_default = {
 	                            1'b1,   // M, config1 implemented
 	                            21'b0,
@@ -269,7 +269,7 @@ module cp0_reg (
             CP0.Count                      <= MEM_Result;
         end
         else if (Count2 == 1'd1)begin
-            CP0.Count                   <= CP0.Count + 1;   //Count寄存器的值在每个时钟周期加1
+            CP0.Count                   <= CP0.Count + 1;   //Count寄存器的值在每个时钟周期�?1
         end 
     end
 //EntryHi
@@ -297,7 +297,7 @@ module cp0_reg (
     always_ff @(posedge clk) begin
         if(rst == `RstEnable) begin
             CP0.Compare                    <= 'x;
-        end 
+        end CP0.Compare
         else if (MEM_RegsWrType.CP0Wr == 1'b1  && MEM_Dst == `CP0_REG_COMPARE ) begin 
             CP0.Compare                    <= MEM_Result;
         end
@@ -477,27 +477,27 @@ module cp0_reg (
     `ifdef All_Uncache
         always_ff @(posedge clk) begin
             if(rst == `RstEnable) begin
-                CP0.Config1.M                  <= 1'b0;                      // 表示不存在config2寄存器
-                CP0.Config1.MMUSize            <= `TLB_ENTRIES_NUM - 1;      // 实际的TLB项 - 1
-                CP0.Config1.IS                 <= IC_SET_PER_WAY[2:0];       // Icache 一路内的行数
+                CP0.Config1.M                  <= 1'b0;                      // 表示不存在config2寄存�?
+                CP0.Config1.MMUSize            <= `TLB_ENTRIES_NUM - 1;      // 实际的TLB�? - 1
+                CP0.Config1.IS                 <= IC_SET_PER_WAY[2:0];       // Icache 一路内的行�?
                 CP0.Config1.IL                 <= '0;                        // 没有Icache   
                 CP0.Config1.IA                 <= '0;                        // Icache 直接映射   
-                CP0.Config1.DS                 <= DC_SET_PER_WAY[2:0];       // Dcache 一路内的行数    
+                CP0.Config1.DS                 <= DC_SET_PER_WAY[2:0];       // Dcache 一路内的行�?    
                 CP0.Config1.DL                 <= '0;                        // 没有dcache   
-                CP0.Config1.DA                 <= DC_ASSOC[2:0];             // Dcache 相连度   
+                CP0.Config1.DA                 <= DC_ASSOC[2:0];             // Dcache 相连�?   
             end 
         end
     `else //开启cache
         always_ff @(posedge clk) begin
             if(rst == `RstEnable) begin
-                CP0.Config1.M                  <= 1'b0;                      // 表示不存在config2寄存器
-                CP0.Config1.MMUSize            <= `TLB_ENTRIES_NUM - 1;      // 实际的TLB项 - 1
-                CP0.Config1.IS                 <= IC_SET_PER_WAY[2:0];       // Icache 一路内的行数
+                CP0.Config1.M                  <= 1'b0;                      // 表示不存在config2寄存�?
+                CP0.Config1.MMUSize            <= `TLB_ENTRIES_NUM - 1;      // 实际的TLB�? - 1
+                CP0.Config1.IS                 <= IC_SET_PER_WAY[2:0];       // Icache 一路内的行�?
                 CP0.Config1.IL                 <= IC_LINE_SIZE[2:0];         // Icacheline大小   
-                CP0.Config1.IA                 <= IC_ASSOC[2:0];             // Icache 相连度   
-                CP0.Config1.DS                 <= DC_SET_PER_WAY[2:0];       // Dcache 一路内的行数    
+                CP0.Config1.IA                 <= IC_ASSOC[2:0];             // Icache 相连�?   
+                CP0.Config1.DS                 <= DC_SET_PER_WAY[2:0];       // Dcache 一路内的行�?    
                 CP0.Config1.DL                 <= DC_LINE_SIZE[2:0];         // Dcacheline大小   
-                CP0.Config1.DA                 <= DC_ASSOC[2:0];             // Dcache 相连度   
+                CP0.Config1.DA                 <= DC_ASSOC[2:0];             // Dcache 相连�?   
             end 
         end
     `endif
