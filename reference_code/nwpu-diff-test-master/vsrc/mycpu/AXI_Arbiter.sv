@@ -49,7 +49,7 @@ module BusArbiter #(
             end
         end
     end
- 
+
     always_ff @(posedge clk)
         if (resetn == 1'b0) begin
             {busy, index} <= '0;
