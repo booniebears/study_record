@@ -26,18 +26,10 @@ module Dcache #(
     input logic clk,
     input logic resetn,
 
-    //with TLBMMU
-    //output VirtualAddressType virt_addr,
-    // input  PhysicalAddressType phsy_addr,现在移到cpu_bus�?
-    // input  logic isCache,
-
-
     AXI_UNCACHE_Interface axi_ubus,
 
     CPU_DBus_Interface cpu_bus,//slave
     AXI_DBus_Interface  axi_bus //master
-    
-    
 );
 //parameters
 localparam int unsigned BYTES_PER_WORD = 4;
@@ -96,8 +88,6 @@ function logic [31:0] mux_byteenable(
         sel[0] ? wdata[7:0] : rdata[7:0]
     };
 endfunction
-
-
 
 function logic  clog2(//TODO: 配置的时候需要改�?
     input logic [1:0] hit
@@ -216,15 +206,8 @@ logic busy_cache;// uncache 直到数据返回
 logic busy_uncache_read;
 logic busy_uncache_write;//这表示store_buffer满了
 logic busy_cache_instr;
-// logic busy_collision;
-// logic busy_collision1;
-// logic busy_collision2;
-
-
-// logic [32-OFFSET_WIDTH:0] MEM2,WB;//用于判断是否写冲�?
 
 logic busy;
-
 
 uncache_store_t fifo_din;//input
 logic fifo_wr_en;
@@ -243,7 +226,6 @@ assign fifo_din   = {req_buffer.tag,req_buffer.index,req_buffer.offset,req_buffe
 assign fifo_wr_en = (cpu_bus.stall || fifo_wr_rst_busy || fifo_full || (~(req_buffer.valid & req_buffer.op & (~req_buffer.isCache))) ) ?  1'b0 : 1'b1;//流水线停滞 不能写 fifo满 不是uncache写指令
 assign fifo_rd_en = (axi_ubus.wr_rdy && (!fifo_empty) && (!fifo_rd_rst_busy)) ? 1'b1 :1'b0;//非空 能写 
 
-
 //连cpu_bus接口
 assign cpu_bus.busy   = busy;
 assign cpu_bus.rdata  = (req_buffer.valid)?data_rdata_final:'0;
@@ -253,8 +235,6 @@ assign axi_bus.rd_req  = (state == MISSCLEAN) ? 1'b1:1'b0;
 assign axi_bus.rd_addr = {req_buffer.tag , req_buffer.index, {OFFSET_WIDTH{1'b0}}};
 assign axi_bus.wr_req  = (cache_state == CACHE_WAIT_WRITE  ||state == MISSDIRTY) ? 1'b1:1'b0;
 
-
-// assign axi_bus.wr_addr = (){pipe_tagv_rdata[lru[req_buffer.index]].tag,req_buffer.index,{OFFSET_WIDTH{1'b0}}};
 always_comb begin : axi_bus_wraddr_blockName
     if (req_buffer.cacheType.isDcache) begin
         case (req_buffer.cacheType.cacheCode)
@@ -272,7 +252,6 @@ always_comb begin : axi_bus_wraddr_blockName
         axi_bus.wr_addr = {pipe_tagv_rdata[lru[req_buffer.index]].tag,req_buffer.index,{OFFSET_WIDTH{1'b0}}};//要被替换的地址
     end
 end
-// assign axi_bus.wr_data = {data_rdata[lru[req_buffer.index]]};
 
 logic[`DCACHE_LINE_WORD*32-1:0] wr_data1,wr_data2,wr_data3;
 
@@ -414,9 +393,6 @@ assign tagv_addr      = (state == REFILLDONE || state == REFILL || cache_state =
 
 assign busy_cache          = (req_buffer.valid & ~pipe_cache_hit & req_buffer.isCache) ? 1'b1:1'b0;
 assign busy_uncache_read   = (uncache_state == UNCACHE_IDLE  || uncache_state == UNCACHE_READ_DONE) ? 1'b0 : 1'b1;
-// assign busy_collision1     = (cpu_bus.origin_valid & cpu_bus.isCache & MEM2[32-OFFSET_WIDTH] & MEM2[31-OFFSET_WIDTH:0]=={cpu_bus.tag,cpu_bus.index})?1'b1:1'b0;
-// assign busy_collision2     = (cpu_bus.origin_valid & cpu_bus.isCache &WB[32-OFFSET_WIDTH] & WB[31-OFFSET_WIDTH:0]=={cpu_bus.tag,cpu_bus.index})?1'b1:1'b0;
-// assign busy_collision      = busy_collision1 | busy_collision2;
 assign busy_uncache_write  = (fifo_full) ? 1'b1:1'b0;
 assign busy_cache_instr    = (cache_state == CACHE_IDLE) ? 1'b0:1'b1;
 assign busy                = busy_cache | busy_uncache_read | busy_uncache_write | busy_cache_instr ;
@@ -465,21 +441,9 @@ always_comb begin : dirty_we_block
     end
 end
 
-// always_comb begin : dirty_we_block
-//     if (state == REFILL) begin
-//         dirty_we = '0;
-//         dirty_we[lru[req_buffer.index]] =1'b1;
-//     end else if(req_buffer.valid & req_buffer.op & req_buffer.isCache)begin
-//         dirty_we = hit;
-//     end else begin
-//         dirty_we = '0;
-//     end
-// end
-
 always_comb begin : data_rdata_final__blockname
     data_rdata_final_= (|data_we[clog2(store_buffer.hit)]  & store_buffer.hit == pipe_hit & {store_buffer.tag,store_buffer.index,store_buffer.offset[OFFSET_WIDTH-1:2]} == {req_buffer.tag,req_buffer.index,req_buffer.offset[OFFSET_WIDTH-1:2]}) ?store_buffer.wdata :data_rdata_sel[clog2(pipe_hit)];
 end
-
 
 always_comb begin : tagv_we_blockName
     if (state == REFILL) begin
