@@ -311,27 +311,6 @@ always_comb begin : axi_bus_wr_data_blockName
             end
     end    
 end
-// genvar i;
-// generate;
-//      for ( i=0; i<LINE_WORD_NUM; i++) begin
-//          if (1) begin
-//             case (req_buffer.cacheType.cacheCode)
-//                 D_Index_Writeback_Invalid:begin
-//                    assign  axi_bus.wr_data[32*(i+1)-1:32*(i)] = data_rdata[req_buffer.tag[0]][i];
-//                 end
-//                 D_Hit_Writeback_Invalid:begin
-//                     assign axi_bus.wr_data[32*(i+1)-1:32*(i)] = data_rdata[clog2(hit)][i];
-//                 end
-//                 default: begin
-//                     assign axi_bus.wr_data = '0;
-//                 end
-//             endcase
-//          end
-//          else begin
-//             assign axi_bus.wr_data[32*(i+1)-1:32*(i)] = data_rdata[lru[req_buffer.index]][i];
-//          end
-//     end
-// endgenerate
 
 //连axi_ubus接口
 assign axi_ubus.rd_req   = (uncache_state == UNCACHE_READ_WAIT_AXI) ? 1'b1:1'b0;
@@ -462,68 +441,6 @@ assign data_read_en   = (state == REFILLDONE  ) ? 1'b1  : (cpu_bus.stall) ? 1'b0
 
 assign dirty_wdata    = (cache_state == CACHE_LOOKUP || state == REFILL)? 1'b0 : 1'b1;
 assign dirty_addr     = req_buffer.index;
-
-
-//if not stall 更新     if stall check if hit & store & cache
-// always_ff @( posedge clk ) begin : MEM2_blockName
-//     if (  cpu_bus.stall & (~(busy_cache|busy_uncache_read|busy_uncache_write)) ) begin//如果全流水阻塞了 并且不是因为dcache的原因阻塞的
-//         MEM2<='0;
-//     end else if(~(cpu_bus.stall))begin
-//         MEM2<={cpu_bus.valid&cpu_bus.op&cpu_bus.isCache,cpu_bus.tag,cpu_bus.index};
-//     end else begin
-//         MEM2<=MEM2;
-//     end
-// end
-
-// always_ff @( posedge clk ) begin : WB_blockName
-//     WB<= MEM2;
-// end
-
-
-// always_comb begin : data_rdata_final2_blockname
-//     unique case({req_buffer.loadType.sign,req_buffer.loadType.size})
-//           `LOADTYPE_LW: begin
-//             data_rdata_final2 = data_rdata_final;  //LW
-//           end 
-//           `LOADTYPE_LH: begin
-//             if(req_buffer.offset[1] == 1'b0) //LH
-//               data_rdata_final2 = {{16{data_rdata_final[15]}},data_rdata_final[15:0]};
-//             else
-//               data_rdata_final2 = {{16{data_rdata_final[31]}},data_rdata_final[31:16]}; 
-//           end
-//           `LOADTYPE_LHU: begin
-//             if(req_buffer.offset[1] == 1'b0) //LHU
-//               data_rdata_final2 = {16'b0,data_rdata_final[15:0]};
-//             else
-//               data_rdata_final2 = {16'b0,data_rdata_final[31:16]};
-//           end
-//           `LOADTYPE_LB: begin
-//             if(req_buffer.offset[1:0] == 2'b00) //LB
-//               data_rdata_final2 = {{24{data_rdata_final[7]}},data_rdata_final[7:0]};
-//             else if(req_buffer.offset[1:0] == 2'b01)
-//               data_rdata_final2 = {{24{data_rdata_final[15]}},data_rdata_final[15:8]};
-//             else if(req_buffer.offset[1:0] == 2'b10)
-//               data_rdata_final2 = {{24{data_rdata_final[23]}},data_rdata_final[23:16]};
-//             else
-//               data_rdata_final2 = {{24{data_rdata_final[31]}},data_rdata_final[31:24]};
-//           end
-//           `LOADTYPE_LBU: begin
-//             if(req_buffer.offset[1:0] == 2'b00) //LBU
-//               data_rdata_final2 = {24'b0,data_rdata_final[7:0]};
-//             else if(req_buffer.offset[1:0] == 2'b01)
-//               data_rdata_final2 = {24'b0,data_rdata_final[15:8]};
-//             else if(req_buffer.offset[1:0] == 2'b10)
-//               data_rdata_final2 = {24'b0,data_rdata_final[23:16]};
-//             else
-//               data_rdata_final2 = {24'b0,data_rdata_final[31:24]};
-//           end
-//           default: begin
-//             data_rdata_final2 = 32'bx;
-//           end
-//         endcase
-// end
-
-
 
 always_comb begin : dirty_we_block
     if (state == REFILL) begin
