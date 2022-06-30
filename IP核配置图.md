@@ -18,3 +18,15 @@
 ![ram_tag P1.png](图片/ram_tag%20P1.png)
 ![ram_tag P2.png](图片/ram_tag%20P2.png)
 ![ram_tag P3.png](图片/ram_tag%20P3.png)
+
+**_4、multiplier_**
+![multiplier P1.png](图片/multiplier%20P1.png)
+![multiplier P2.png](图片/multiplier%20P2.png)
+
+**_5、mydiv_**
+![mydiv P1.png](图片/mydiv%20P1.png)
+![mydiv P2.png](图片/mydiv%20P2.png)
+
+**_6、mydiv_unsigned_**
+![mydiv_unsigned P1.png](图片/mydiv_unsigned%20P1.png)
+![mydiv_unsigned P2.png](图片/mydiv_unsigned%20P2.png)
