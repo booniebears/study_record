@@ -1,0 +1,883 @@
+2022.6.30
+性能測試，共十個點
+********************性能測試10個測試點，順序及其結果如下（our trace）********************
+
+1.streamcopy          PASS
+2.bitcount            PASS
+3.dhrystone           PASS
+4.stringsearch        PASS
+5.sha                 PASS
+6.coremark            fail
+7.crc32               PASS
+8.selectsort          PASS
+9.quicksort           fail
+10.bubblesort         PASS
+
+********************性能測試10個測試點，順序及其結果如上（our trace）********************
+
+
+
+
+
+
+
+
+
+
+//3dhrystone_mytrace
+*************************dhrystone_mytrace************************* 
+Test begin!
+dhrystone test begin.
+
+
+Dhrystone Benchmark, Version 2.1 (Language: C)
+
+
+
+Dhrystone Benchmark, Version 2.1 (Language: C)
+
+
+Program compiled without 'register' attribute
+
+
+Execution starts, 10 runs through Dhrystone
+
+Execution ends
+
+
+Final values of the variables used in the benchmark:
+
+
+Int_Glob:            5
+
+        should be:   5
+
+Bool_Glob:           1
+
+        should be:   1
+
+Ch_1_Glob:           A
+
+        should be:   A
+
+Ch_2_Glob:           B
+
+        should be:   B
+
+Arr_1_Glob[8]:       7
+
+        should be:   7
+
+Arr_2_Glob[8][7]:    20
+
+        should be:   20
+
+Ptr_Glob->
+
+  Ptr_Comp:          -1614788112
+
+        should be:   (implementation-dependent)
+
+  Discr:             0
+
+        should be:   0
+
+  Enum_Comp:         2
+
+        should be:   2
+
+  Int_Comp:          17
+
+        should be:   17
+
+  Str_Comp:          DHRYSTONE PROGRAM, SOME STRING
+
+        should be:   DHRYSTONE PROGRAM, SOME STRING
+
+Next_Ptr_Glob->
+
+  Ptr_Comp:          -1614788112
+
+        should be:   (implementation-dependent), same as above
+
+  Discr:             0
+
+        should be:   0
+
+  Enum_Comp:         1
+
+        should be:   1
+
+  Int_Comp:          18
+
+        should be:   18
+
+  Str_Comp:          DHRYSTONE PROGRAM, SOME STRING
+
+        should be:   DHRYSTONE PROGRAM, SOME STRING
+
+Int_1_Loc:           5
+
+        should be:   5
+
+Int_2_Loc:           13
+
+        should be:   13
+
+Int_3_Loc:           7
+
+        should be:   7
+
+Enum_Loc:            1
+
+        should be:   1
+
+Str_1_Loc:           DHRYSTONE PROGRAM, 1'ST STRING
+
+        should be:   DHRYSTONE PROGRAM, 1'ST STRING
+
+Str_2_Loc:           DHRYSTONE PROGRAM, 2'ND STRING
+
+        should be:   DHRYSTONE PROGRAM, 2'ND STRING
+
+
+Begin ns: 204770
+
+End ns: 345040
+
+Total ns: 140270
+
+Dhrystones per ms:                      71 
+
+
+dhrystone PASS!
+
+dhrystone: Total Count(SoC count) = 0x2515b
+
+dhrystone: Total Count(CPU count) = 0x10d60
+
+==============================================================
+Test end!
+----PASS!!!
+*************************dhrystone_mytrace************************* 
+
+
+
+
+
+
+
+
+
+
+//4.stringsearch
+*************************stringsearch************************* 
+==============================================================
+Test begin!
+string search test begin.
+
+"abb" is in "cabbie" ["abbie"]
+"you" is in "your" ["your"]
+"not" is not in "It isn't here"
+"it" is in "But it is here" ["it is here"]
+"dad" is in "hodad" ["dad"]
+"yoo" is in "yoohoo" ["yoohoo"]
+"hoo" is in "yoohoo" ["hoo"]
+"oo" is in "yoohoo" ["oohoo"]
+"oh" is in "yoohoo" ["ohoo"]
+"xx" is not in "yoohoo"
+"xx" is in "xx" ["xx"]
+"x" is in "x" ["x"]
+"x" is not in "."
+"field" is in "In recent years, the field of photonic " ["field of photonic "]
+"new" is in "crystals has found new" ["new"]
+"row" is in "applications in the RF and microwave" ["rowave"]
+"regime" is in "regime. A new type of metallic" ["regime. A new type of metallic"]
+"boom" is not in "electromagnetic crystal has been"
+"that" is in "developed that is having a" ["that is having a"]
+"impact" is in "significant impact on the field of" ["impact on the field of"]
+"and" is not in "antennas. It consists of a"
+"zoom" is not in "conductive surface, covered with a"
+"texture" is in "special texture which alters its" ["texture which alters its"]
+"magnet" is in "electromagnetic properties. Made of solid" ["magnetic properties. Made of solid"]
+"doom" is not in "metal, the structure"
+"loom" is not in "conducts DC currents, but over a"
+"freq" is in "particular frequency range it does" ["frequency range it does"]
+"current" is in "not conduct AC currents. It does not" ["currents. It does not"]
+"phase" is in "reverse the phase of reflected" ["phase of reflected"]
+"images" is not in "waves, and the effective image currents"
+"appears" is not in "appear in-phase, rather than"
+"phase" is in "out-of-phase as they are on normal" ["phase as they are on normal"]
+"conductor" is in "conductors. Furthermore, surface" ["conductors. Furthermore, surface"]
+"wavez" is not in "waves do not propagate, and instead"
+"normal" is not in "radiate efficiently into free"
+"free" is not in "space. This new material, termed a"
+"termed" is not in "high-impedance surface, provides"
+"provide" is not in "a useful new ground plane for novel"
+"for" is not in "low-profile antennas and other"
+"and" is not in "electromagnetic structures."
+"struct" is not in "The recent protests about the Michigamua"
+"about" is not in "student organization have raised an"
+"have" is not in "important question as to the proper nature"
+"proper" is not in "and scope of University involvement"
+"involve" is not in "with student organizations. Accordingly"
+"describedly" is not in "the panel described in my Statement of"
+"thats" is not in "February 25, 2000 that is considering the"
+"spaces" is not in "question of privileged space also will"
+"circumstance" is in "consider under what circumstances and in" ["circumstances and in"]
+"the" is in "what ways the University, its" ["the University, its"]
+"member" is in "administrators and faculty members should" ["members should"]
+"such" is in "be associated with such organizations" ["such organizations"]
+"guide" is not in "and it will recommend guiding principles"
+"regard" is in "in this regard. The University's" ["regard. The University's"]
+"officers" is not in "Executive Officers and I will then decide"
+"implement" is in "whether and how to implement such" ["implement such"]
+"principalities" is not in "principles."
+string search PASS!
+
+string search: Total Count(SoC count) = 0x50994
+
+string search: Total Count(CPU count) = 0x24a0b
+
+==============================================================
+Test end!
+----PASS!!!
+*************************stringsearch************************* 
+
+
+
+
+
+
+
+
+
+
+//5.sha
+*************************sha*************************
+==============================================================
+Test begin!
+sha test begin.
+
+len: 2048
+
+512
+
+512
+
+512
+
+512
+
+437358104 2057077515 2988414705 3742976831 2079096471
+
+437358104 : 437358104
+
+2057077515 : 2057077515
+
+2988414705 : 2988414705
+
+3742976831 : 3742976831
+
+2079096471 : 2079096471
+
+sha PASS!
+
+sha: Total Count(SoC count) = 0x56ae7
+
+sha: Total Count(CPU count) = 0x2762e
+
+==============================================================
+Test end!
+----PASS!!!
+*************************sha*************************
+
+
+
+
+
+
+
+
+
+
+//6.coremark
+*************************coremark*************************
+==============================================================
+Test begin!
+coremark test begin.
+
+arg : 0, 0, 102, 1, 7, 1, 2000 
+
+test start
+
+computation done 
+
+2K performance run parameters for coremark.
+
+[0]ERROR! list crc 0x7fbf - should be 0xe714
+
+[0]ERROR! matrix crc 0x4d52 - should be 0x1fd7
+
+[0]ERROR! state crc 0xe807 - should be 0x8e3a
+
+CoreMark Size    : 666
+
+Total ns : 7807130
+
+Iterations/Sec : 128
+
+COREMARK/MHZ = (1000000.0/CPU_COUNT_PER_US)*NSEC_PER_USEC*results[0].iterations/total_ns
+
+It equals to 1000*1000*iteration/total_ns
+
+In this run, iterate=1, total_ns=7807130
+
+
+
+Total ticks      : 0
+
+Total time (secs): 0
+
+Iterations       : 1
+
+Compiler version : GCC4.3.0
+
+Compiler flags   : 
+
+Memory location  : Please put data memory location here
+
+			(e.g. code in flash, data on heap etc)
+
+seedcrc          : 0xe9f5
+
+[0]crclist       : 0x7fbf
+
+[0]crcmatrix     : 0x4d52
+
+[0]crcstate      : 0xe807
+
+[0]crcfinal      : 0x7fbf
+
+Errors detected
+
+coremark ERROR!!!
+
+coremark: Total Count(SoC count) = 0xde84d
+
+coremark: Total Count(CPU count) = 0x651fc
+
+==============================================================
+Test end!
+----PASS!!!
+*************************coremark*************************
+
+
+
+
+
+
+
+
+
+//7.crc32
+*************************crc32*************************
+==============================================================
+Test begin!
+crc32 test begin.
+
+start
+
+len: 200
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+
+32
+
+33
+
+34
+
+35
+
+36
+
+37
+
+38
+
+39
+
+40
+
+41
+
+42
+
+43
+
+44
+
+45
+
+46
+
+47
+
+48
+
+49
+
+50
+
+51
+
+52
+
+53
+
+54
+
+55
+
+56
+
+57
+
+58
+
+59
+
+60
+
+61
+
+62
+
+63
+
+64
+
+65
+
+66
+
+67
+
+68
+
+69
+
+70
+
+71
+
+72
+
+73
+
+74
+
+75
+
+76
+
+77
+
+78
+
+79
+
+80
+
+81
+
+82
+
+83
+
+84
+
+85
+
+86
+
+87
+
+88
+
+89
+
+90
+
+91
+
+92
+
+93
+
+94
+
+95
+
+96
+
+97
+
+98
+
+99
+
+100
+
+101
+
+102
+
+103
+
+104
+
+105
+
+106
+
+107
+
+108
+
+109
+
+110
+
+111
+
+112
+
+113
+
+114
+
+115
+
+116
+
+117
+
+118
+
+119
+
+120
+
+121
+
+122
+
+123
+
+124
+
+125
+
+126
+
+127
+
+128
+
+129
+
+130
+
+131
+
+132
+
+133
+
+134
+
+135
+
+136
+
+137
+
+138
+
+139
+
+140
+
+141
+
+142
+
+143
+
+144
+
+145
+
+146
+
+147
+
+148
+
+149
+
+150
+
+151
+
+152
+
+153
+
+154
+
+155
+
+156
+
+157
+
+158
+
+159
+
+160
+
+161
+
+162
+
+163
+
+164
+
+165
+
+166
+
+167
+
+168
+
+169
+
+170
+
+171
+
+172
+
+173
+
+174
+
+175
+
+176
+
+177
+
+178
+
+179
+
+180
+
+181
+
+182
+
+183
+
+184
+
+185
+
+186
+
+187
+
+188
+
+189
+
+190
+
+191
+
+192
+
+193
+
+194
+
+195
+
+196
+
+197
+
+198
+
+199
+
+200
+
+ffffffff
+
+end
+
+1601645211, 00000200
+
+crc32 PASS!
+
+crc32: Total Count(SoC count) = 0x79337
+
+crc32: Total Count(CPU count) = 0x37156
+
+==============================================================
+Test end!
+----PASS!!!
+*************************crc32*************************
+
+
+
+
+
+
+
+
+
+//8.selectsort
+*************************selectsort*************************
+==============================================================
+Test begin!
+select sort test begin.
+
+select sort PASS!
+
+select sort: Total Count(SoC count) = 0x49907
+
+select sort: Total Count(CPU count) = 0x216ae
+
+==============================================================
+Test end!
+----PASS!!!
+*************************selectsort*************************
+
+
+
+
+
+
+
+
+
+//9.quicksort
+*************************quicksort*************************
+==============================================================
+Test begin!
+quick sort test begin.
+
+quick sort ERROR!!!
+
+quick sort: Total Count(SoC count) = 0xe24e2
+
+quick sort: Total Count(CPU count) = 0x66d6c
+
+==============================================================
+Test end!
+----PASS!!!
+*************************quicksort*************************
+
+
+
+
+
+
+
+
+
+//10.bubblesort
+*************************bubblesort****************************
+==============================================================
+Test begin!
+bubble sort test begin.
+
+bubble sort PASS!
+
+bubble sort: Total Count(SoC count) = 0x435b5
+
+bubble sort: Total Count(CPU count) = 0x1e988
+
+==============================================================
+Test end!
+----PASS!!!
+*************************bubblesort****************************
