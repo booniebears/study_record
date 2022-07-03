@@ -442,7 +442,11 @@ always_comb begin : dirty_we_block
 end
 
 always_comb begin : data_rdata_final__blockname
-    data_rdata_final_= (|data_we[clog2(store_buffer.hit)]  & store_buffer.hit == pipe_hit & {store_buffer.tag,store_buffer.index,store_buffer.offset[OFFSET_WIDTH-1:2]} == {req_buffer.tag,req_buffer.index,req_buffer.offset[OFFSET_WIDTH-1:2]}) ?store_buffer.wdata :data_rdata_sel[clog2(pipe_hit)];
+    data_rdata_final_= (|data_we[clog2(store_buffer.hit)] & store_buffer.hit == pipe_hit & 
+    {store_buffer.tag,store_buffer.index,store_buffer.offset[OFFSET_WIDTH-1:2]} 
+    == {req_buffer.tag,req_buffer.index,req_buffer.offset[OFFSET_WIDTH-1:2]}) ?
+                                                                store_buffer.wdata :
+                                                                data_rdata_sel[clog2(pipe_hit)];
 end
 
 always_comb begin : tagv_we_blockName
@@ -551,18 +555,22 @@ always_comb begin : state_next_blockname
             if ( req_buffer.valid) begin
                 if (req_buffer.isCache == 1'b0 ) begin
                     state_next = LOOKUP;
-                end else begin
-                if (pipe_cache_hit) begin
-                    state_next = LOOKUP;
-                end else begin
+                end 
+                else begin
+                    if (pipe_cache_hit) begin
+                        state_next = LOOKUP;
+                    end 
+                else begin
                     if (dirty_rdata[lru[req_buffer.index]]) begin
                         state_next = MISSDIRTY ;
-                    end else begin
+                    end 
+                    else begin
                         state_next = MISSCLEAN ;
                     end
                 end
                 end      
-            end else begin
+            end 
+            else begin
                 state_next = LOOKUP;
             end
         
@@ -618,7 +626,6 @@ always_comb begin : wb_state_next_blockname
     end else begin
         wb_state_next = WB_IDLE;
     end
-
 end
 `ifdef DEBUG
 logic victim_num;
