@@ -45,7 +45,8 @@ if(ASSOC_NUM == 2) begin
             end
         end
     end
-end else  begin
+end 
+else begin
     always_comb begin
         state_next = state;    //好习惯啊
 
