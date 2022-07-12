@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<Index Version="1" Minor="0">
+	<Repository value="/home/oslab/nontrivial-mips/vivado/ip_repo">
+	</Repository>
+	<IP>
+		<VLNV value="harrychen.xyz:user:nontrivial_mips:1.0">
+		</VLNV>
+		<DisplayName value="NonTrivialMIPS CPU">
+		</DisplayName>
+		<Description value="NonTrivialMIPS is a synthesizable superscalar MIPS processor with branch prediction and FPU support, and it is capable of booting linux.">
+		</Description>
+		<CoreRevision value="11">
+		</CoreRevision>
+		<ComponentPath value="nontrivial_mips/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="aartix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/Embedded_Processing/Processor">
+			</Taxonomy>
+			<Taxonomy value="/UserIP">
+			</Taxonomy>
+		</Taxonomies>
+		<UpgradesFrom>
+			<Upgrade value="xilinx.com:user:nontrivial_mips:1.0">
+			</Upgrade>
+		</UpgradesFrom>
+		<LockPrevVersions value="false">
+		</LockPrevVersions>
+		<Interfaces>
+			<Interface value="AXI4">
+			</Interface>
+		</Interfaces>
+	</IP>
+	<IP>
+		<VLNV value="harrychen.xyz:user:confreg:1.1">
+		</VLNV>
+		<DisplayName value="Loongson Configuration Register (Modified)">
+		</DisplayName>
+		<Description value="Control module of GPIO, timer and so on">
+		</Description>
+		<CoreRevision value="2">
+		</CoreRevision>
+		<ComponentPath value="loongson_conf_reg/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="aartix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/UserIP">
+			</Taxonomy>
+		</Taxonomies>
+		<UpgradesFrom>
+			<Upgrade value="xilinx.com:user:confreg:1.0">
+			</Upgrade>
+			<Upgrade value="loongson.cn:user:confreg:1.0">
+			</Upgrade>
+		</UpgradesFrom>
+		<LockPrevVersions value="false">
+		</LockPrevVersions>
+		<Interfaces>
+			<Interface value="AXI4">
+			</Interface>
+		</Interfaces>
+	</IP>
+	<IP>
+		<VLNV value="harrychen.xyz:user:altera_ps2:1.0">
+		</VLNV>
+		<DisplayName value="Altera PS/2 Controller">
+		</DisplayName>
+		<Description value="Controller of PS/2 keyboard from Altera">
+		</Description>
+		<CoreRevision value="2">
+		</CoreRevision>
+		<ComponentPath value="altera_ps2/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="artix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/UserIP">
+			</Taxonomy>
+		</Taxonomies>
+		<UpgradesFrom>
+			<Upgrade value="xilinx.com:user:testPS2qsys_ps2_0:1.0">
+			</Upgrade>
+		</UpgradesFrom>
+		<LockPrevVersions value="false">
+		</LockPrevVersions>
+	</IP>
+	<IP>
+		<VLNV value="harrychen.xyz:user:video_stream_modifier:1.0">
+		</VLNV>
+		<DisplayName value="Video Stream Modifier">
+		</DisplayName>
+		<Description value="Modify the AXI 4 Stream vIdeo data of Xilinx Framebuffer Read/Write IP">
+		</Description>
+		<CoreRevision value="1">
+		</CoreRevision>
+		<ComponentPath value="video_stream_modifier/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="aartix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="aspartan7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="azynq">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="kintex7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qartix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qkintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qkintex7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qvirtex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qzynq">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="spartan7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="virtex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="zynq">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="zynquplus">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/UserIP">
+			</Taxonomy>
+		</Taxonomies>
+		<UpgradesFrom>
+			<Upgrade value="user.org:user:stream_ctl:1.0">
+			</Upgrade>
+		</UpgradesFrom>
+		<LockPrevVersions value="false">
+		</LockPrevVersions>
+		<Interfaces>
+			<Interface value="AXI4-Stream">
+			</Interface>
+		</Interfaces>
+	</IP>
+	<IP>
+		<VLNV value="jiege.ch:user:utmi_usb_controller:1.0">
+		</VLNV>
+		<DisplayName value="UTMI USB 1.1 Controller">
+		</DisplayName>
+		<Description value="USB1.1 Host Controller">
+		</Description>
+		<CoreRevision value="2">
+		</CoreRevision>
+		<ComponentPath value="usb_host_controller/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="aartix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="aspartan7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="azynq">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="kintex7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qartix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qkintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qkintex7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qvirtex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qzynq">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="spartan7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="virtex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="zynq">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="zynquplus">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/UserIP">
+			</Taxonomy>
+		</Taxonomies>
+		<UpgradesFrom>
+			<Upgrade value="user.org:user:usbh_top:1.0">
+			</Upgrade>
+		</UpgradesFrom>
+		<LockPrevVersions value="false">
+		</LockPrevVersions>
+		<Interfaces>
+			<Interface value="AXI4">
+			</Interface>
+		</Interfaces>
+	</IP>
+	<IP>
+		<VLNV value="harrychen.xyz:user:nt35510_controller:1.0">
+		</VLNV>
+		<DisplayName value="NT35510 LCD Controller">
+		</DisplayName>
+		<Description value="APB adapter of NT35510 LCD">
+		</Description>
+		<CoreRevision value="1">
+		</CoreRevision>
+		<ComponentPath value="nt35510_controller/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="aartix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/UserIP">
+			</Taxonomy>
+		</Taxonomies>
+		<UpgradesFrom>
+			<Upgrade value="xilinx.com:user:nt35510_apb_adapter_v1_0:1.0">
+			</Upgrade>
+		</UpgradesFrom>
+		<LockPrevVersions value="false">
+		</LockPrevVersions>
+	</IP>
+	<IP>
+		<VLNV value="loongson.cn:user:loongson_cpu_gs232:1.0">
+		</VLNV>
+		<DisplayName value="Loongson GS232 CPU">
+		</DisplayName>
+		<Description value="IP package of Loongson GS232, an open source CPU">
+		</Description>
+		<CoreRevision value="5">
+		</CoreRevision>
+		<ComponentPath value="loongson_cpu_gs232/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="aartix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/Embedded_Processing/Processor">
+			</Taxonomy>
+			<Taxonomy value="/UserIP">
+			</Taxonomy>
+		</Taxonomies>
+		<UpgradesFrom>
+			<Upgrade value="xilinx.com:user:godson_cpu_mid:1.0">
+			</Upgrade>
+		</UpgradesFrom>
+		<LockPrevVersions value="false">
+		</LockPrevVersions>
+		<Interfaces>
+			<Interface value="AXI4">
+			</Interface>
+		</Interfaces>
+	</IP>
+	<BUSDEF>
+		<VLNV value="harrychen.xyz:user:utmi:1.0">
+		</VLNV>
+		<Description value="">
+		</Description>
+		<XMLFile value="utmi.xml">
+		</XMLFile>
+	</BUSDEF>
+	<BUSABS>
+		<VLNV value="harrychen.xyz:user:utmi_rtl:1.0">
+		</VLNV>
+		<Description value="">
+		</Description>
+		<XMLFile value="utmi_rtl.xml">
+		</XMLFile>
+	</BUSABS>
+</Index>
+

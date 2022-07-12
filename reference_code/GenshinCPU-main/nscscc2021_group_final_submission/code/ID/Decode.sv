@@ -464,7 +464,7 @@ module Decode(
         6'b111001 : begin // SWC1
             CpU1_instr_valid = `ISCOP1_INSTR;
         end
-        6'b010001: begin  // CPO1
+        6'b010001: begin  // COP1
           case (ID_Instr[25:21])
             5'b00000 : CpU1_instr_valid = `ISCOP1_INSTR;  // MFC1
             5'b00010 : CpU1_instr_valid = `ISCOP1_INSTR;  // CFC1
