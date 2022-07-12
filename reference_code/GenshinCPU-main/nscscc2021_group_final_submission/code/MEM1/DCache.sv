@@ -424,7 +424,8 @@ always_comb begin : dirty_we_block
         dirty_we[lru[req_buffer.index]] =1'b1;
     end else if(req_buffer.cacheType.isDcache && cache_state == CACHE_LOOKUP)begin
         case (req_buffer.cacheType.cacheCode)
-            D_Index_Writeback_Invalid,D_Index_Store_Tag:begin
+            D_Index_Writeback_Invalid,
+            :begin
                 dirty_we = (req_buffer.tag[0]) ? 2'b10 : 2'b01;
             end
             D_Hit_Invalid,D_Hit_Writeback_Invalid:begin
