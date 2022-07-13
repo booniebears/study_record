@@ -1,0 +1,72 @@
+Date : 2021-07-11 21:42:51
+Directory : c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor
+Total : 42 files,  7870 codes, 958 comments, 852 blanks, all 9680 lines
+
+Languages
++---------------+------------+------------+------------+------------+------------+
+| language      | files      | code       | comment    | blank      | total      |
++---------------+------------+------------+------------+------------+------------+
+| SystemVerilog |         42 |      7,870 |        958 |        852 |      9,680 |
++---------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                   | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                      |         42 |      7,870 |        958 |        852 |      9,680 |
+| EXE                                                                    |         11 |        975 |        165 |         88 |      1,228 |
+| ID                                                                     |          6 |      1,577 |        100 |        175 |      1,852 |
+| IF1                                                                    |          4 |        536 |        115 |         98 |        749 |
+| MEM1                                                                   |          5 |      1,472 |        150 |        169 |      1,791 |
+| MEM2                                                                   |          2 |        116 |         14 |         12 |        142 |
+| WB                                                                     |          3 |        192 |         35 |         17 |        244 |
++------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------+---------------+------------+------------+------------+------------+
+| filename                                                               | language      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------+---------------+------------+------------+------------+------------+
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\AXI.sv                | SystemVerilog |        969 |         65 |         55 |      1,089 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\CPU_Defines.svh       | SystemVerilog |        558 |         90 |         60 |        708 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\Cache_Defines.svh     | SystemVerilog |         94 |         22 |         22 |        138 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\Cache_options.svh     | SystemVerilog |         13 |          5 |          9 |         27 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\CommonDefines.svh     | SystemVerilog |        273 |         58 |         74 |        405 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\EXE\ALU.sv            | SystemVerilog |         49 |         13 |         10 |         72 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\EXE\BranchSolve.sv    | SystemVerilog |         65 |          9 |          2 |         76 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\EXE\Countbit.sv       | SystemVerilog |         81 |         14 |         13 |        108 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\EXE\DCacheWen.sv      | SystemVerilog |        110 |         10 |          6 |        126 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\EXE\EXE_Reg.sv        | SystemVerilog |        110 |         11 |          4 |        125 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\EXE\ExceptionInEXE.sv | SystemVerilog |         34 |          2 |          1 |         37 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\EXE\ForwardUnit.sv    | SystemVerilog |         35 |         12 |          4 |         51 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\EXE\HILO.sv           | SystemVerilog |         34 |         42 |          5 |         81 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\EXE\MULTDIV.sv        | SystemVerilog |        201 |         27 |         18 |        246 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\EXE\TOP_EXE.sv        | SystemVerilog |        218 |         16 |         24 |        258 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\EXE\TRAP.sv           | SystemVerilog |         38 |          9 |          1 |         48 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\ID\Control.sv         | SystemVerilog |      1,330 |         37 |        137 |      1,504 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\ID\DataHazard.sv      | SystemVerilog |         33 |         18 |          5 |         56 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\ID\EXT.sv             | SystemVerilog |         27 |          9 |          0 |         36 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\ID\ID_Reg.sv          | SystemVerilog |         39 |         12 |          5 |         56 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\ID\RF.sv              | SystemVerilog |         41 |          7 |         17 |         65 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\ID\TOP_ID.sv          | SystemVerilog |        107 |         17 |         11 |        135 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\IF1\ICache.sv         | SystemVerilog |        385 |         81 |         76 |        542 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\IF1\PC.sv             | SystemVerilog |         16 |         10 |          4 |         30 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\IF1\PCSEL.sv          | SystemVerilog |         48 |         10 |          7 |         65 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\IF1\TOP_IF.sv         | SystemVerilog |         87 |         14 |         11 |        112 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\MEM1\CP0.sv           | SystemVerilog |        379 |         45 |         27 |        451 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\MEM1\DCache.sv        | SystemVerilog |        755 |         62 |        108 |        925 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\MEM1\Exception.sv     | SystemVerilog |         67 |         10 |          6 |         83 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\MEM1\MEM_Reg.sv       | SystemVerilog |         91 |         12 |         15 |        118 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\MEM1\TOP_MEM.sv       | SystemVerilog |        180 |         21 |         13 |        214 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\MEM2\MEM2_Reg.sv      | SystemVerilog |         67 |         12 |          5 |         84 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\MEM2\TOP_MEM2.sv      | SystemVerilog |         49 |          2 |          7 |         58 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\MMU.sv                | SystemVerilog |         14 |         24 |          5 |         43 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\MUX.sv                | SystemVerilog |         77 |         13 |          7 |         97 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\TLBMMU.sv             | SystemVerilog |        245 |         14 |         14 |        273 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\WB\EXT2.sv            | SystemVerilog |         53 |         10 |          5 |         68 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\WB\TOP_WB.sv          | SystemVerilog |         72 |         13 |          7 |         92 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\WB\WB_Reg.sv          | SystemVerilog |         67 |         12 |          5 |         84 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\WrControl.sv          | SystemVerilog |        206 |         46 |         18 |        270 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\mycpu_top.sv          | SystemVerilog |        308 |         24 |         16 |        348 |
+| c:\Users\ywj\Desktop\GitLab\CPU_OPT\Src\refactor\tlb.sv                | SystemVerilog |        245 |         18 |         13 |        276 |
+| Total                                                                  |               |      7,870 |        958 |        852 |      9,680 |
++------------------------------------------------------------------------+---------------+------------+------------+------------+------------+
