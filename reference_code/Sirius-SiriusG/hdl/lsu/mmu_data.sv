@@ -41,7 +41,7 @@ module mmu_data(
         output logic                dwvalid,
         output logic [31:0]         dwdata,
         output logic                dwlast,
-        input                       daddr_wreq_ok,
+        input                       daddr_wreq_ok, //awready
         input                       ddata_wready,
         input                       ddata_bvalid
 );
