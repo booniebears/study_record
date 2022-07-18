@@ -49,7 +49,7 @@ void difftest_step(int step);
 
 void difftest_init(){
   void *handle;
-    const char* REF_SO = "/mnt/soc_run_os/vsim-soc/vsim_for_pmon/nemu_pmon.so"; 
+    const char* REF_SO = "/root/difftest/nwpu-diff-test-master/nemu_pmon.so"; 
     printf("%s\n",REF_SO);
     handle = dlopen(REF_SO, RTLD_LAZY | RTLD_DEEPBIND);
     //   printf("hello\n");
