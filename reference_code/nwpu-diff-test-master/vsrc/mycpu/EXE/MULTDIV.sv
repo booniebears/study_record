@@ -7,8 +7,8 @@
  * @FilePath: \undefinedd:\nontrival-cpu\Src\refactor\EXE\MULTDIV.sv
  * 
  */
-`include "/mnt/soc_run_os/vsim-func/vsrc/mycpu/CommonDefines.svh"
-`include "/mnt/soc_run_os/vsim-func/vsrc/mycpu/CPU_Defines.svh"
+`include "/root/difftest/nwpu-diff-test-master/vsrc/mycpu/CommonDefines.svh"
+`include "/root/difftest/nwpu-diff-test-master/vsrc/mycpu/CPU_Defines.svh"
 module MULTDIV(
     input logic           clk,    
     input logic           rst,             // 除法状态机的复位信号

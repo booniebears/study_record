@@ -9,8 +9,8 @@
  * @Description: 
  */
 
-`include "/mnt/soc_run_os/vsim-func/vsrc/mycpu/CommonDefines.svh"
-`include "/mnt/soc_run_os/vsim-func/vsrc/mycpu/CPU_Defines.svh"
+`include "/root/difftest/nwpu-diff-test-master/vsrc/mycpu/CommonDefines.svh"
+`include "/root/difftest/nwpu-diff-test-master/vsrc/mycpu/CPU_Defines.svh"
 //TODO: DH_STALL的检测可以是并行的
 module DataHazard (
     input logic [4:0]  ID_rs,

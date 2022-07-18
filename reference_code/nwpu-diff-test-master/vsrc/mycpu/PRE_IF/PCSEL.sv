@@ -8,8 +8,8 @@
  * @IO PORT:
  * @Description: this is a module to produce the signal to choose which is the next PC
  */
-`include "/mnt/soc_run_os/vsim-func/vsrc/mycpu/CommonDefines.svh"
-`include "/mnt/soc_run_os/vsim-func/vsrc/mycpu/CPU_Defines.svh"
+`include "/root/difftest/nwpu-diff-test-master/vsrc/mycpu/CommonDefines.svh"
+`include "/root/difftest/nwpu-diff-test-master/vsrc/mycpu/CPU_Defines.svh"
 
 module PCSEL #(
     parameter PCSel_PC4      = 3'b000,

@@ -9,8 +9,8 @@
  * @Description: 
  */
 
-`include "/mnt/soc_run_os/vsim-func/vsrc/mycpu/CommonDefines.svh"  
-`include "/mnt/soc_run_os/vsim-func/vsrc/mycpu/CPU_Defines.svh"
+`include "/root/difftest/nwpu-diff-test-master/vsrc/mycpu/CommonDefines.svh"  
+`include "/root/difftest/nwpu-diff-test-master/vsrc/mycpu/CPU_Defines.svh"
 
  module Exception(
     input ExceptinPipeType     MEM_ExceptType,        //译码执行阶段收集到的异常信息

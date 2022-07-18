@@ -1,5 +1,5 @@
 
-`include "/mnt/soc_run_os/vsim-func/vsrc/mycpu/CPU_Defines.svh"
+`include "/root/difftest/nwpu-diff-test-master/vsrc/mycpu/CPU_Defines.svh"
 
 module RF (
     input logic clk,

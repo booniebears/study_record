@@ -6,8 +6,8 @@
  * @Description: In User Settings Edit
  * @FilePath: \Src\Code\NewCache\plru.sv
  */
-`include "/mnt/soc_run_os/vsim-func/vsrc/mycpu/Cache_Defines.svh"
-`include "/mnt/soc_run_os/vsim-func/vsrc/mycpu/CPU_Defines.svh"
+`include "/root/difftest/nwpu-diff-test-master/vsrc/mycpu/Cache_Defines.svh"
+`include "/root/difftest/nwpu-diff-test-master/vsrc/mycpu/CPU_Defines.svh"
 module PLRU #(
     parameter int unsigned ASSOC_NUM = 4
 ) (

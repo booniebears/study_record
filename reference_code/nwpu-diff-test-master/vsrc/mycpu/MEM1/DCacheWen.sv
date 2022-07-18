@@ -9,8 +9,8 @@
  * @Description:  改成了组合逻辑
  */
 
-`include "/mnt/soc_run_os/vsim-func/vsrc/mycpu/CommonDefines.svh"
-`include "/mnt/soc_run_os/vsim-func/vsrc/mycpu/CPU_Defines.svh"
+`include "/root/difftest/nwpu-diff-test-master/vsrc/mycpu/CommonDefines.svh"
+`include "/root/difftest/nwpu-diff-test-master/vsrc/mycpu/CPU_Defines.svh"
 
 module DCacheWen(
     input  logic [1:0]        MEM_ALUOut,    // 地址信息

@@ -7,8 +7,8 @@
  * @FilePath: \Src\ICache.sv
  */
 //重写之后的Cache Icache Dcache复用一个设计
-`include "/mnt/soc_run_os/vsim-func/vsrc/mycpu/Cache_Defines.svh"
-`include "/mnt/soc_run_os/vsim-func/vsrc/mycpu/CPU_Defines.svh"
+`include "/root/difftest/nwpu-diff-test-master/vsrc/mycpu/Cache_Defines.svh"
+`include "/root/difftest/nwpu-diff-test-master/vsrc/mycpu/CPU_Defines.svh"
 //`define Dcache  //如果是DCache就在文件中使用这个宏
 
 module Icache #(
