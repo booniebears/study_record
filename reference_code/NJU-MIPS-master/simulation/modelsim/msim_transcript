@@ -1,0 +1,584 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do NJU_MIPS_run_msim_rtl_verilog.do
+# if ![file isdirectory NJU_MIPS_iputf_libs] {
+# 	file mkdir NJU_MIPS_iputf_libs
+# }
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+# 
+# 
+# vlog "C:/Users/Fermat/workplace/NJU_MIPS/xck_sim/xck.vo"
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:06 on Dec 15,2018
+# vlog -reportprogress 300 C:/Users/Fermat/workplace/NJU_MIPS/xck_sim/xck.vo 
+# -- Compiling module xck
+# 
+# Top level modules:
+# 	xck
+# End time: 19:06:06 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS {C:/Users/Fermat/workplace/NJU_MIPS/clkgen.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:06 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS" C:/Users/Fermat/workplace/NJU_MIPS/clkgen.v 
+# -- Compiling module clkgen
+# 
+# Top level modules:
+# 	clkgen
+# End time: 19:06:07 on Dec 15,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS {C:/Users/Fermat/workplace/NJU_MIPS/macro.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:07 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS" C:/Users/Fermat/workplace/NJU_MIPS/macro.v 
+# End time: 19:06:07 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS {C:/Users/Fermat/workplace/NJU_MIPS/NJU_MIPS.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:07 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS" C:/Users/Fermat/workplace/NJU_MIPS/NJU_MIPS.v 
+# -- Compiling module NJU_MIPS
+# 
+# Top level modules:
+# 	NJU_MIPS
+# End time: 19:06:07 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/vga {C:/Users/Fermat/workplace/NJU_MIPS/vga/vga.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:07 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/vga" C:/Users/Fermat/workplace/NJU_MIPS/vga/vga.v 
+# -- Compiling module vga
+# 
+# Top level modules:
+# 	vga
+# End time: 19:06:07 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/vga {C:/Users/Fermat/workplace/NJU_MIPS/vga/vga_ctrl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:07 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/vga" C:/Users/Fermat/workplace/NJU_MIPS/vga/vga_ctrl.v 
+# -- Compiling module vga_ctrl
+# 
+# Top level modules:
+# 	vga_ctrl
+# End time: 19:06:07 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/keyboard {C:/Users/Fermat/workplace/NJU_MIPS/keyboard/keyboard.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:07 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/keyboard" C:/Users/Fermat/workplace/NJU_MIPS/keyboard/keyboard.v 
+# -- Compiling module keyboard
+# 
+# Top level modules:
+# 	keyboard
+# End time: 19:06:07 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/keyboard {C:/Users/Fermat/workplace/NJU_MIPS/keyboard/ps2_keyboard.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:07 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/keyboard" C:/Users/Fermat/workplace/NJU_MIPS/keyboard/ps2_keyboard.v 
+# -- Compiling module ps2_keyboard
+# 
+# Top level modules:
+# 	ps2_keyboard
+# End time: 19:06:07 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio {C:/Users/Fermat/workplace/NJU_MIPS/audio/audio.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:07 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio" C:/Users/Fermat/workplace/NJU_MIPS/audio/audio.v 
+# -- Compiling module audio
+# 
+# Top level modules:
+# 	audio
+# End time: 19:06:07 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio {C:/Users/Fermat/workplace/NJU_MIPS/audio/freq_div.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:07 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio" C:/Users/Fermat/workplace/NJU_MIPS/audio/freq_div.v 
+# -- Compiling module freq_div
+# 
+# Top level modules:
+# 	freq_div
+# End time: 19:06:07 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio {C:/Users/Fermat/workplace/NJU_MIPS/audio/I2C_Audio_Config.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:07 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio" C:/Users/Fermat/workplace/NJU_MIPS/audio/I2C_Audio_Config.v 
+# -- Compiling module I2C_Audio_Config
+# 
+# Top level modules:
+# 	I2C_Audio_Config
+# End time: 19:06:07 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio {C:/Users/Fermat/workplace/NJU_MIPS/audio/I2C_Controller.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:07 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio" C:/Users/Fermat/workplace/NJU_MIPS/audio/I2C_Controller.v 
+# -- Compiling module I2C_Controller
+# 
+# Top level modules:
+# 	I2C_Controller
+# End time: 19:06:08 on Dec 15,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio {C:/Users/Fermat/workplace/NJU_MIPS/audio/Volume_Controller.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:08 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio" C:/Users/Fermat/workplace/NJU_MIPS/audio/Volume_Controller.v 
+# -- Compiling module Volume_Controller
+# 
+# Top level modules:
+# 	Volume_Controller
+# End time: 19:06:08 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS {C:/Users/Fermat/workplace/NJU_MIPS/inst_rom_ip.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:08 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS" C:/Users/Fermat/workplace/NJU_MIPS/inst_rom_ip.v 
+# -- Compiling module inst_rom_ip
+# 
+# Top level modules:
+# 	inst_rom_ip
+# End time: 19:06:08 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS {C:/Users/Fermat/workplace/NJU_MIPS/data_ram_ip.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:08 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS" C:/Users/Fermat/workplace/NJU_MIPS/data_ram_ip.v 
+# -- Compiling module data_ram_ip
+# 
+# Top level modules:
+# 	data_ram_ip
+# End time: 19:06:08 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS {C:/Users/Fermat/workplace/NJU_MIPS/ascii2pcode.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:08 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS" C:/Users/Fermat/workplace/NJU_MIPS/ascii2pcode.v 
+# -- Compiling module ascii2pcode
+# 
+# Top level modules:
+# 	ascii2pcode
+# End time: 19:06:08 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS {C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip0.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:08 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS" C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip0.v 
+# -- Compiling module video_ram_ip0
+# 
+# Top level modules:
+# 	video_ram_ip0
+# End time: 19:06:08 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS {C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:08 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS" C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip1.v 
+# -- Compiling module video_ram_ip1
+# 
+# Top level modules:
+# 	video_ram_ip1
+# End time: 19:06:08 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS {C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:08 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS" C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip2.v 
+# -- Compiling module video_ram_ip2
+# 
+# Top level modules:
+# 	video_ram_ip2
+# End time: 19:06:08 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS {C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip3.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:08 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS" C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip3.v 
+# -- Compiling module video_ram_ip3
+# 
+# Top level modules:
+# 	video_ram_ip3
+# End time: 19:06:08 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS {C:/Users/Fermat/workplace/NJU_MIPS/kb_rom.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:08 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS" C:/Users/Fermat/workplace/NJU_MIPS/kb_rom.v 
+# -- Compiling module kb_rom
+# 
+# Top level modules:
+# 	kb_rom
+# End time: 19:06:09 on Dec 15,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS {C:/Users/Fermat/workplace/NJU_MIPS/kb_shift_rom.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:09 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS" C:/Users/Fermat/workplace/NJU_MIPS/kb_shift_rom.v 
+# -- Compiling module kb_shift_rom
+# 
+# Top level modules:
+# 	kb_shift_rom
+# End time: 19:06:09 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio {C:/Users/Fermat/workplace/NJU_MIPS/audio/I2S.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:09 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio" C:/Users/Fermat/workplace/NJU_MIPS/audio/I2S.v 
+# -- Compiling module I2S
+# 
+# Top level modules:
+# 	I2S
+# End time: 19:06:09 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS {C:/Users/Fermat/workplace/NJU_MIPS/sintable.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:09 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS" C:/Users/Fermat/workplace/NJU_MIPS/sintable.v 
+# -- Compiling module sintable
+# 
+# Top level modules:
+# 	sintable
+# End time: 19:06:09 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS {C:/Users/Fermat/workplace/NJU_MIPS/c2f.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:09 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS" C:/Users/Fermat/workplace/NJU_MIPS/c2f.v 
+# -- Compiling module c2f
+# 
+# Top level modules:
+# 	c2f
+# End time: 19:06:09 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu {C:/Users/Fermat/workplace/NJU_MIPS/cpu/cpu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:09 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu" C:/Users/Fermat/workplace/NJU_MIPS/cpu/cpu.v 
+# -- Compiling module cpu
+# 
+# Top level modules:
+# 	cpu
+# End time: 19:06:09 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu {C:/Users/Fermat/workplace/NJU_MIPS/cpu/ctrl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:09 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu" C:/Users/Fermat/workplace/NJU_MIPS/cpu/ctrl.v 
+# -- Compiling module ctrl
+# 
+# Top level modules:
+# 	ctrl
+# End time: 19:06:09 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu {C:/Users/Fermat/workplace/NJU_MIPS/cpu/div.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:09 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu" C:/Users/Fermat/workplace/NJU_MIPS/cpu/div.v 
+# -- Compiling module div
+# 
+# Top level modules:
+# 	div
+# End time: 19:06:09 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu {C:/Users/Fermat/workplace/NJU_MIPS/cpu/ex.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:09 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu" C:/Users/Fermat/workplace/NJU_MIPS/cpu/ex.v 
+# -- Compiling module ex
+# 
+# Top level modules:
+# 	ex
+# End time: 19:06:09 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu {C:/Users/Fermat/workplace/NJU_MIPS/cpu/ex_mem.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:09 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu" C:/Users/Fermat/workplace/NJU_MIPS/cpu/ex_mem.v 
+# -- Compiling module ex_mem
+# 
+# Top level modules:
+# 	ex_mem
+# End time: 19:06:10 on Dec 15,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu {C:/Users/Fermat/workplace/NJU_MIPS/cpu/hilo_reg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:10 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu" C:/Users/Fermat/workplace/NJU_MIPS/cpu/hilo_reg.v 
+# -- Compiling module hilo_reg
+# 
+# Top level modules:
+# 	hilo_reg
+# End time: 19:06:10 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu {C:/Users/Fermat/workplace/NJU_MIPS/cpu/id.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:10 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu" C:/Users/Fermat/workplace/NJU_MIPS/cpu/id.v 
+# -- Compiling module id
+# 
+# Top level modules:
+# 	id
+# End time: 19:06:10 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu {C:/Users/Fermat/workplace/NJU_MIPS/cpu/id_ex.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:10 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu" C:/Users/Fermat/workplace/NJU_MIPS/cpu/id_ex.v 
+# -- Compiling module id_ex
+# 
+# Top level modules:
+# 	id_ex
+# End time: 19:06:10 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu {C:/Users/Fermat/workplace/NJU_MIPS/cpu/if_id.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:10 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu" C:/Users/Fermat/workplace/NJU_MIPS/cpu/if_id.v 
+# -- Compiling module if_id
+# 
+# Top level modules:
+# 	if_id
+# End time: 19:06:10 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu {C:/Users/Fermat/workplace/NJU_MIPS/cpu/mem.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:10 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu" C:/Users/Fermat/workplace/NJU_MIPS/cpu/mem.v 
+# -- Compiling module mem
+# 
+# Top level modules:
+# 	mem
+# End time: 19:06:10 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu {C:/Users/Fermat/workplace/NJU_MIPS/cpu/mem_wb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:10 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu" C:/Users/Fermat/workplace/NJU_MIPS/cpu/mem_wb.v 
+# -- Compiling module mem_wb
+# 
+# Top level modules:
+# 	mem_wb
+# End time: 19:06:10 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu {C:/Users/Fermat/workplace/NJU_MIPS/cpu/pc_reg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:10 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu" C:/Users/Fermat/workplace/NJU_MIPS/cpu/pc_reg.v 
+# -- Compiling module pc_reg
+# 
+# Top level modules:
+# 	pc_reg
+# End time: 19:06:10 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu {C:/Users/Fermat/workplace/NJU_MIPS/cpu/regfile.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:10 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu" C:/Users/Fermat/workplace/NJU_MIPS/cpu/regfile.v 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 19:06:10 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS {C:/Users/Fermat/workplace/NJU_MIPS/sopc.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:10 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS" C:/Users/Fermat/workplace/NJU_MIPS/sopc.v 
+# -- Compiling module sopc
+# 
+# Top level modules:
+# 	sopc
+# End time: 19:06:11 on Dec 15,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM {C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM/inst_ram.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:11 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM" C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM/inst_ram.v 
+# -- Compiling module inst_ram
+# 
+# Top level modules:
+# 	inst_ram
+# End time: 19:06:11 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM {C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM/inst_rom.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:11 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM" C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM/inst_rom.v 
+# -- Compiling module inst_rom
+# 
+# Top level modules:
+# 	inst_rom
+# End time: 19:06:11 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/data_RAM {C:/Users/Fermat/workplace/NJU_MIPS/data_RAM/data_ram.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:11 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/data_RAM" C:/Users/Fermat/workplace/NJU_MIPS/data_RAM/data_ram.v 
+# -- Compiling module data_ram
+# 
+# Top level modules:
+# 	data_ram
+# End time: 19:06:11 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/vga {C:/Users/Fermat/workplace/NJU_MIPS/vga/video_ram.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:11 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/vga" C:/Users/Fermat/workplace/NJU_MIPS/vga/video_ram.v 
+# -- Compiling module video_ram
+# 
+# Top level modules:
+# 	video_ram
+# End time: 19:06:11 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim {C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim/sopc_tst.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:11 on Dec 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim" C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim/sopc_tst.v 
+# -- Compiling module sopc_tst
+# 
+# Top level modules:
+# 	sopc_tst
+# End time: 19:06:11 on Dec 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  sopc_tst
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" sopc_tst 
+# Start time: 19:06:11 on Dec 15,2018
+# Loading work.sopc_tst
+# Loading work.sopc
+# Loading work.clkgen
+# Loading work.cpu
+# Loading work.pc_reg
+# Loading work.if_id
+# Loading work.id
+# Loading work.regfile
+# Loading work.id_ex
+# Loading work.ex
+# Loading work.ex_mem
+# Loading work.mem
+# Loading work.mem_wb
+# Loading work.hilo_reg
+# Loading work.ctrl
+# Loading work.div
+# Loading work.inst_ram
+# Loading work.inst_rom
+# Loading work.inst_rom_ip
+# Loading altera_mf_ver.altsyncram
+# Loading work.data_ram
+# Loading work.data_ram_ip
+# Loading work.video_ram
+# Loading work.video_ram_ip0
+# Loading work.video_ram_ip1
+# Loading work.video_ram_ip2
+# Loading work.video_ram_ip3
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3017) C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim/sopc_tst.v(25): [TFMPC] - Too few port connections. Expected 7, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0 File: C:/Users/Fermat/workplace/NJU_MIPS/sopc.v
+# ** Warning: (vsim-3722) C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim/sopc_tst.v(25): [TFMPC] - Missing connection for port 'vga_q'.
+# ** Warning: (vsim-3722) C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim/sopc_tst.v(25): [TFMPC] - Missing connection for port 'vga_rdaddress'.
+# ** Warning: (vsim-3722) C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim/sopc_tst.v(25): [TFMPC] - Missing connection for port 'input_ascii'.
+# ** Warning: (vsim-3722) C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim/sopc_tst.v(25): [TFMPC] - Missing connection for port 'input_en'.
+# ** Warning: (vsim-3722) C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim/sopc_tst.v(25): [TFMPC] - Missing connection for port 'audio_en'.
+# ** Warning: (vsim-3015) C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM/inst_rom.v(14): [PCDPC] - Port size (12) does not match connection size (13) for port 'address_a'. The port definition is at: C:/Users/Fermat/workplace/NJU_MIPS/inst_rom_ip.v(40).
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/inst_rom0/ROM File: C:/Users/Fermat/workplace/NJU_MIPS/inst_rom_ip.v
+# ** Warning: (vsim-3015) C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM/inst_rom.v(14): [PCDPC] - Port size (12) does not match connection size (13) for port 'address_b'. The port definition is at: C:/Users/Fermat/workplace/NJU_MIPS/inst_rom_ip.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/inst_rom0/ROM File: C:/Users/Fermat/workplace/NJU_MIPS/inst_rom_ip.v
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Error: (vsim-VCD-3453) VCD dumping is not enabled for file "wave.vcd".    : C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim/sopc_tst.v(21)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "./program/inst_rom.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/inst_rom0/ROM/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ./program/inst_rom.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "./program/inst_rom.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/inst_rom0/ROM/altsyncram_component/m_default/altsyncram_inst
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "./vga/vm0.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/video_ram0/ram0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ./vga/vm0.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "./vga/vm0.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/video_ram0/ram0/altsyncram_component/m_default/altsyncram_inst
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "./vga/vm1.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/video_ram0/ram1/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ./vga/vm1.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "./vga/vm1.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/video_ram0/ram1/altsyncram_component/m_default/altsyncram_inst
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "./vga/vm2.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/video_ram0/ram2/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ./vga/vm2.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "./vga/vm2.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/video_ram0/ram2/altsyncram_component/m_default/altsyncram_inst
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "./vga/vm3.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/video_ram0/ram3/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ./vga/vm3.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "./vga/vm3.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/video_ram0/ram3/altsyncram_component/m_default/altsyncram_inst
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "./vga/vm0.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/video_ram0/rambk0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ./vga/vm0.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "./vga/vm0.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/video_ram0/rambk0/altsyncram_component/m_default/altsyncram_inst
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "./vga/vm1.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/video_ram0/rambk1/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ./vga/vm1.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "./vga/vm1.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/video_ram0/rambk1/altsyncram_component/m_default/altsyncram_inst
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "./vga/vm2.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/video_ram0/rambk2/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ./vga/vm2.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "./vga/vm2.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/video_ram0/rambk2/altsyncram_component/m_default/altsyncram_inst
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "./vga/vm3.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/video_ram0/rambk3/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ./vga/vm3.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "./vga/vm3.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /sopc_tst/sopc0/video_ram0/rambk3/altsyncram_component/m_default/altsyncram_inst
+# ** Note: $stop    : C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim/sopc_tst.v(16)
+#    Time: 161950 ns  Iteration: 0  Instance: /sopc_tst
+# Break in Module sopc_tst at C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim/sopc_tst.v line 16
+add wave -hex /sopc_tst/sopc0/mips0/regfile0/regs
+
+
+# End time: 19:06:48 on Dec 15,2018, Elapsed time: 0:00:37
+# Errors: 1, Warnings: 26

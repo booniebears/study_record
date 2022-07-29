@@ -1,0 +1,959 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim
+vascii2pcode
+Z1 !s110 1544871968
+!i10b 1
+!s100 15G1AXgbhk1^n`zDHM>mD2
+IYfLN@C_beMJIAN^1_IKhE1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1544853868
+8C:/Users/Fermat/workplace/NJU_MIPS/ascii2pcode.v
+FC:/Users/Fermat/workplace/NJU_MIPS/ascii2pcode.v
+Z3 L0 39
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1544871968.000000
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/ascii2pcode.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS|C:/Users/Fermat/workplace/NJU_MIPS/ascii2pcode.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS
+Z8 tCvgOpt 0
+vaudio
+Z9 !s110 1544871967
+!i10b 1
+!s100 J@gA<e:`mY;7mXm0X[8gR1
+IOX3KA1nD>lmKc4`zWzV_<1
+R2
+R0
+w1544765969
+8C:/Users/Fermat/workplace/NJU_MIPS/audio/audio.v
+FC:/Users/Fermat/workplace/NJU_MIPS/audio/audio.v
+L0 1
+R4
+r1
+!s85 0
+31
+Z10 !s108 1544871967.000000
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/audio/audio.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio|C:/Users/Fermat/workplace/NJU_MIPS/audio/audio.v|
+!i113 1
+R6
+Z11 !s92 -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio
+R8
+vc2f
+Z12 !s110 1544871969
+!i10b 1
+!s100 Y1;keM:aK8;h`Pb?3R[631
+Ifm1zWHWB=QXm>NSEQIISJ2
+R2
+R0
+w1544854878
+8C:/Users/Fermat/workplace/NJU_MIPS/c2f.v
+FC:/Users/Fermat/workplace/NJU_MIPS/c2f.v
+R3
+R4
+r1
+!s85 0
+31
+Z13 !s108 1544871969.000000
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/c2f.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS|C:/Users/Fermat/workplace/NJU_MIPS/c2f.v|
+!i113 1
+R6
+R7
+R8
+vclkgen
+R9
+!i10b 1
+!s100 BLbX?C_9DJT41g6>mj2[`3
+I;<4fM:b=:3:i[KVNWTnF[3
+R2
+R0
+Z14 w1544096996
+8C:/Users/Fermat/workplace/NJU_MIPS/clkgen.v
+FC:/Users/Fermat/workplace/NJU_MIPS/clkgen.v
+L0 1
+R4
+r1
+!s85 0
+31
+Z15 !s108 1544871966.000000
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/clkgen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS|C:/Users/Fermat/workplace/NJU_MIPS/clkgen.v|
+!i113 1
+R6
+R7
+R8
+vcpu
+R12
+!i10b 1
+!s100 BNN]Sgf0i8B?=]3j;A:iJ1
+IH>oeZKdS1]AMN0cD[<4HL1
+R2
+R0
+w1544871783
+8C:/Users/Fermat/workplace/NJU_MIPS/cpu/cpu.v
+FC:/Users/Fermat/workplace/NJU_MIPS/cpu/cpu.v
+L0 2
+R4
+r1
+!s85 0
+31
+R13
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/cpu/cpu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu|C:/Users/Fermat/workplace/NJU_MIPS/cpu/cpu.v|
+!i113 1
+R6
+Z16 !s92 -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu
+R8
+vctrl
+R12
+!i10b 1
+!s100 1=l]j2bnS1m>_JheY[9Ci2
+IJ[oa?nkbfeiD4CdgKUW_b0
+R2
+R0
+w1542974045
+8C:/Users/Fermat/workplace/NJU_MIPS/cpu/ctrl.v
+FC:/Users/Fermat/workplace/NJU_MIPS/cpu/ctrl.v
+L0 3
+R4
+r1
+!s85 0
+31
+R13
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/cpu/ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu|C:/Users/Fermat/workplace/NJU_MIPS/cpu/ctrl.v|
+!i113 1
+R6
+R16
+R8
+vdata_ram
+Z17 !s110 1544871971
+!i10b 1
+!s100 1_]SWFgWb4=S1acAa=kA:0
+IVC[ej=]P8QPS:3iB>fLTO0
+R2
+R0
+R14
+8C:/Users/Fermat/workplace/NJU_MIPS/data_RAM/data_ram.v
+FC:/Users/Fermat/workplace/NJU_MIPS/data_RAM/data_ram.v
+L0 2
+R4
+r1
+!s85 0
+31
+Z18 !s108 1544871971.000000
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/data_RAM/data_ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/data_RAM|C:/Users/Fermat/workplace/NJU_MIPS/data_RAM/data_ram.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/data_RAM
+R8
+vdata_ram_ip
+R1
+!i10b 1
+!s100 ocB?O72U95mDj4kH93ZUF1
+I8cQeLG6e2<nQR1:2fNJim3
+R2
+R0
+w1544853503
+8C:/Users/Fermat/workplace/NJU_MIPS/data_ram_ip.v
+FC:/Users/Fermat/workplace/NJU_MIPS/data_ram_ip.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/data_ram_ip.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS|C:/Users/Fermat/workplace/NJU_MIPS/data_ram_ip.v|
+!i113 1
+R6
+R7
+R8
+vdiv
+R12
+!i10b 1
+!s100 oZ?dl5zR3CLR6_;CKGdF=0
+I343g@bSO]IKG<1ACUIKZ[2
+R2
+R0
+Z19 w1544850830
+8C:/Users/Fermat/workplace/NJU_MIPS/cpu/div.v
+FC:/Users/Fermat/workplace/NJU_MIPS/cpu/div.v
+L0 3
+R4
+r1
+!s85 0
+31
+R13
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/cpu/div.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu|C:/Users/Fermat/workplace/NJU_MIPS/cpu/div.v|
+!i113 1
+R6
+R16
+R8
+vex
+R12
+!i10b 1
+!s100 Ef_40C>@PgIgQeKl0MIhJ3
+I`hLZz7@LFciL6b=j6[nSO0
+R2
+R0
+R19
+8C:/Users/Fermat/workplace/NJU_MIPS/cpu/ex.v
+FC:/Users/Fermat/workplace/NJU_MIPS/cpu/ex.v
+L0 2
+R4
+r1
+!s85 0
+31
+R13
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/cpu/ex.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu|C:/Users/Fermat/workplace/NJU_MIPS/cpu/ex.v|
+!i113 1
+R6
+R16
+R8
+vex_mem
+Z20 !s110 1544871970
+!i10b 1
+!s100 Oa=N_@^O=1c]EghE>o1Z22
+Ij?D07LRN?=3@2BZhTUPkg2
+R2
+R0
+R19
+8C:/Users/Fermat/workplace/NJU_MIPS/cpu/ex_mem.v
+FC:/Users/Fermat/workplace/NJU_MIPS/cpu/ex_mem.v
+L0 2
+R4
+r1
+!s85 0
+31
+R13
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/cpu/ex_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu|C:/Users/Fermat/workplace/NJU_MIPS/cpu/ex_mem.v|
+!i113 1
+R6
+R16
+R8
+vfreq_div
+R9
+!i10b 1
+!s100 jHDI5Mc9kHz@G;?RE21RC0
+I_>b=E9T@h>AeV3Wkj7gKn0
+R2
+R0
+R19
+8C:/Users/Fermat/workplace/NJU_MIPS/audio/freq_div.v
+FC:/Users/Fermat/workplace/NJU_MIPS/audio/freq_div.v
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/audio/freq_div.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio|C:/Users/Fermat/workplace/NJU_MIPS/audio/freq_div.v|
+!i113 1
+R6
+R11
+R8
+vhilo_reg
+R20
+!i10b 1
+!s100 <bBhaa_>eilLJ4<QCQ<TK3
+Io[3<WKV1<;<46mJoC66TB2
+R2
+R0
+w1542970739
+8C:/Users/Fermat/workplace/NJU_MIPS/cpu/hilo_reg.v
+FC:/Users/Fermat/workplace/NJU_MIPS/cpu/hilo_reg.v
+L0 2
+R4
+r1
+!s85 0
+31
+Z21 !s108 1544871970.000000
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/cpu/hilo_reg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu|C:/Users/Fermat/workplace/NJU_MIPS/cpu/hilo_reg.v|
+!i113 1
+R6
+R16
+R8
+vI2C_Audio_Config
+R9
+!i10b 1
+!s100 ]h5AaFmQmCHP3kD2[gZ7E0
+I`PJ_4BDY2k0XbKY3[iaea1
+R2
+R0
+R19
+8C:/Users/Fermat/workplace/NJU_MIPS/audio/I2C_Audio_Config.v
+FC:/Users/Fermat/workplace/NJU_MIPS/audio/I2C_Audio_Config.v
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/audio/I2C_Audio_Config.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio|C:/Users/Fermat/workplace/NJU_MIPS/audio/I2C_Audio_Config.v|
+!i113 1
+R6
+R11
+R8
+n@i2@c_@audio_@config
+vI2C_Controller
+R1
+!i10b 1
+!s100 <oA;__81R[7XJVnoYSLEJ2
+IdK:SmkP4F;ElKALzz4fV00
+R2
+R0
+R19
+8C:/Users/Fermat/workplace/NJU_MIPS/audio/I2C_Controller.v
+FC:/Users/Fermat/workplace/NJU_MIPS/audio/I2C_Controller.v
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/audio/I2C_Controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio|C:/Users/Fermat/workplace/NJU_MIPS/audio/I2C_Controller.v|
+!i113 1
+R6
+R11
+R8
+n@i2@c_@controller
+vI2S
+R12
+!i10b 1
+!s100 okDOV[`n9hz85Jm6;[OHX1
+II0MQmZZYY0_H8K`n9aO;L1
+R2
+R0
+w1544764066
+8C:/Users/Fermat/workplace/NJU_MIPS/audio/I2S.v
+FC:/Users/Fermat/workplace/NJU_MIPS/audio/I2S.v
+L0 1
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/audio/I2S.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio|C:/Users/Fermat/workplace/NJU_MIPS/audio/I2S.v|
+!i113 1
+R6
+R11
+R8
+n@i2@s
+vid
+R20
+!i10b 1
+!s100 J?AnTjfLL6XQ`08Hf?m=73
+IR9M>`Xd54OTXEXaYZhl^A3
+R2
+R0
+R14
+8C:/Users/Fermat/workplace/NJU_MIPS/cpu/id.v
+FC:/Users/Fermat/workplace/NJU_MIPS/cpu/id.v
+L0 3
+R4
+r1
+!s85 0
+31
+R21
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/cpu/id.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu|C:/Users/Fermat/workplace/NJU_MIPS/cpu/id.v|
+!i113 1
+R6
+R16
+R8
+vid_ex
+R20
+!i10b 1
+!s100 TSS0AF9fjJQZlDaaLbd222
+I]aA9]PGMID_:X@T:`=]g31
+R2
+R0
+R14
+8C:/Users/Fermat/workplace/NJU_MIPS/cpu/id_ex.v
+FC:/Users/Fermat/workplace/NJU_MIPS/cpu/id_ex.v
+L0 2
+R4
+r1
+!s85 0
+31
+R21
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/cpu/id_ex.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu|C:/Users/Fermat/workplace/NJU_MIPS/cpu/id_ex.v|
+!i113 1
+R6
+R16
+R8
+vif_id
+R20
+!i10b 1
+!s100 A72nEb`hQkm[gU=zPRY[`3
+I;5D@CC:RFNhSC9>iS2:541
+R2
+R0
+w1542949699
+8C:/Users/Fermat/workplace/NJU_MIPS/cpu/if_id.v
+FC:/Users/Fermat/workplace/NJU_MIPS/cpu/if_id.v
+L0 2
+R4
+r1
+!s85 0
+31
+R21
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/cpu/if_id.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu|C:/Users/Fermat/workplace/NJU_MIPS/cpu/if_id.v|
+!i113 1
+R6
+R16
+R8
+vinst_ram
+R17
+!i10b 1
+!s100 gCE^X6;:QM`kCCGLn`J5M2
+IlWmF8RYVo<gjbhjcbDCC@3
+R2
+R0
+w1544803780
+8C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM/inst_ram.v
+FC:/Users/Fermat/workplace/NJU_MIPS/inst_RAM/inst_ram.v
+L0 2
+R4
+r1
+!s85 0
+31
+R18
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM/inst_ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM|C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM/inst_ram.v|
+!i113 1
+R6
+Z22 !s92 -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM
+R8
+vinst_rom
+R17
+!i10b 1
+!s100 ?ocT702[>:9;L>oeW4oNR0
+I:FMS684e1SDfE>W??BWKk3
+R2
+R0
+R19
+8C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM/inst_rom.v
+FC:/Users/Fermat/workplace/NJU_MIPS/inst_RAM/inst_rom.v
+L0 2
+R4
+r1
+!s85 0
+31
+R18
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM/inst_rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM|C:/Users/Fermat/workplace/NJU_MIPS/inst_RAM/inst_rom.v|
+!i113 1
+R6
+R22
+R8
+vinst_rom_ip
+R1
+!i10b 1
+!s100 ;@VBzDCiKoh<`MYCC5nfb0
+IMfcKQdM1dP80iM?2?k6011
+R2
+R0
+w1544853338
+8C:/Users/Fermat/workplace/NJU_MIPS/inst_rom_ip.v
+FC:/Users/Fermat/workplace/NJU_MIPS/inst_rom_ip.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/inst_rom_ip.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS|C:/Users/Fermat/workplace/NJU_MIPS/inst_rom_ip.v|
+!i113 1
+R6
+R7
+R8
+vkb_rom
+R12
+!i10b 1
+!s100 oOPY2b]i?0?iM[fbZP`no1
+IJ=D:^gDZ28i[jd:NEcORT1
+R2
+R0
+w1544854392
+8C:/Users/Fermat/workplace/NJU_MIPS/kb_rom.v
+FC:/Users/Fermat/workplace/NJU_MIPS/kb_rom.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/kb_rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS|C:/Users/Fermat/workplace/NJU_MIPS/kb_rom.v|
+!i113 1
+R6
+R7
+R8
+vkb_shift_rom
+R12
+!i10b 1
+!s100 O1kRY<zW9FdR9@VnLH8U^0
+ICg:kOKjeb`J;=zNES`dof0
+R2
+R0
+w1544854426
+8C:/Users/Fermat/workplace/NJU_MIPS/kb_shift_rom.v
+FC:/Users/Fermat/workplace/NJU_MIPS/kb_shift_rom.v
+R3
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/kb_shift_rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS|C:/Users/Fermat/workplace/NJU_MIPS/kb_shift_rom.v|
+!i113 1
+R6
+R7
+R8
+vkeyboard
+R9
+!i10b 1
+!s100 L]AoeDYZ6;5IlXIo1DW9W2
+I7bCX:d^U>?S8cHZ4R<nl42
+R2
+R0
+w1544854251
+8C:/Users/Fermat/workplace/NJU_MIPS/keyboard/keyboard.v
+FC:/Users/Fermat/workplace/NJU_MIPS/keyboard/keyboard.v
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/keyboard/keyboard.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/keyboard|C:/Users/Fermat/workplace/NJU_MIPS/keyboard/keyboard.v|
+!i113 1
+R6
+Z23 !s92 -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/keyboard
+R8
+vmem
+R20
+!i10b 1
+!s100 ;C8Wg^H70CZ9<U<?g3YJ72
+I@=oeM3a3<9j>in`e=YmM]3
+R2
+R0
+R19
+8C:/Users/Fermat/workplace/NJU_MIPS/cpu/mem.v
+FC:/Users/Fermat/workplace/NJU_MIPS/cpu/mem.v
+L0 2
+R4
+r1
+!s85 0
+31
+R21
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/cpu/mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu|C:/Users/Fermat/workplace/NJU_MIPS/cpu/mem.v|
+!i113 1
+R6
+R16
+R8
+vmem_wb
+R20
+!i10b 1
+!s100 FaHGUGU]i49SX_911PZ@82
+I`mL4M8PXID4UWW7`l5n282
+R2
+R0
+R14
+8C:/Users/Fermat/workplace/NJU_MIPS/cpu/mem_wb.v
+FC:/Users/Fermat/workplace/NJU_MIPS/cpu/mem_wb.v
+L0 2
+R4
+r1
+!s85 0
+31
+R21
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/cpu/mem_wb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu|C:/Users/Fermat/workplace/NJU_MIPS/cpu/mem_wb.v|
+!i113 1
+R6
+R16
+R8
+vNJU_MIPS
+R9
+!i10b 1
+!s100 ]I[TUU>>>B7@P:Ab1NW>b3
+I1Tj8j5[=I:D>iZn6HdHBN2
+R2
+R0
+w1544869375
+8C:/Users/Fermat/workplace/NJU_MIPS/NJU_MIPS.v
+FC:/Users/Fermat/workplace/NJU_MIPS/NJU_MIPS.v
+L0 6
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/NJU_MIPS.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS|C:/Users/Fermat/workplace/NJU_MIPS/NJU_MIPS.v|
+!i113 1
+R6
+R7
+R8
+n@n@j@u_@m@i@p@s
+vpc_reg
+R20
+!i10b 1
+!s100 d?koFXQfFbLhci>cTIn8E1
+I^KR:OjOG4;b0US`dR>=`W2
+R2
+R0
+w1544031679
+8C:/Users/Fermat/workplace/NJU_MIPS/cpu/pc_reg.v
+FC:/Users/Fermat/workplace/NJU_MIPS/cpu/pc_reg.v
+L0 2
+R4
+r1
+!s85 0
+31
+R21
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/cpu/pc_reg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu|C:/Users/Fermat/workplace/NJU_MIPS/cpu/pc_reg.v|
+!i113 1
+R6
+R16
+R8
+vps2_keyboard
+R9
+!i10b 1
+!s100 S:Lzj4fj[E]onY4JfbTkT0
+Iz<CY@Xcm]6GJf[MOkFmHb1
+R2
+R0
+R19
+8C:/Users/Fermat/workplace/NJU_MIPS/keyboard/ps2_keyboard.v
+FC:/Users/Fermat/workplace/NJU_MIPS/keyboard/ps2_keyboard.v
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/keyboard/ps2_keyboard.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/keyboard|C:/Users/Fermat/workplace/NJU_MIPS/keyboard/ps2_keyboard.v|
+!i113 1
+R6
+R23
+R8
+vregfile
+R20
+!i10b 1
+!s100 :S4W9[1IePEXZJzXza4S;0
+IijfkmN[aYfPnmA4P<K5;B1
+R2
+R0
+w1542724822
+8C:/Users/Fermat/workplace/NJU_MIPS/cpu/regfile.v
+FC:/Users/Fermat/workplace/NJU_MIPS/cpu/regfile.v
+L0 2
+R4
+r1
+!s85 0
+31
+R21
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/cpu/regfile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/cpu|C:/Users/Fermat/workplace/NJU_MIPS/cpu/regfile.v|
+!i113 1
+R6
+R16
+R8
+vsintable
+R12
+!i10b 1
+!s100 3XaQEX>zlPL>3dnWCEoZN0
+IgFLY]bDT<k4bY6g]eo1O91
+R2
+R0
+w1544854767
+8C:/Users/Fermat/workplace/NJU_MIPS/sintable.v
+FC:/Users/Fermat/workplace/NJU_MIPS/sintable.v
+R3
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/sintable.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS|C:/Users/Fermat/workplace/NJU_MIPS/sintable.v|
+!i113 1
+R6
+R7
+R8
+vsopc
+R17
+!i10b 1
+!s100 Tde^kz0;joj:8KmBlN^iF3
+I@LhR9gZIWNZNiUJnIM8lC1
+R2
+R0
+w1544871776
+8C:/Users/Fermat/workplace/NJU_MIPS/sopc.v
+FC:/Users/Fermat/workplace/NJU_MIPS/sopc.v
+L0 2
+R4
+r1
+!s85 0
+31
+R21
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/sopc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS|C:/Users/Fermat/workplace/NJU_MIPS/sopc.v|
+!i113 1
+R6
+R7
+R8
+vsopc_tst
+R17
+!i10b 1
+!s100 W`4F7MLFQbJmLjc_Z4^kk2
+IF99RdB0aCD[i<@L3MbE?30
+R2
+R0
+w1544869333
+8C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim/sopc_tst.v
+FC:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim/sopc_tst.v
+L0 4
+R4
+r1
+!s85 0
+31
+R18
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim/sopc_tst.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim|C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim/sopc_tst.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/simulation/modelsim
+R8
+vvga
+R9
+!i10b 1
+!s100 jG?WkK_zoYWCAochIK>WH3
+IjkR>42^A@:o4z33d];bMJ2
+R2
+R0
+w1544853668
+8C:/Users/Fermat/workplace/NJU_MIPS/vga/vga.v
+FC:/Users/Fermat/workplace/NJU_MIPS/vga/vga.v
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/vga/vga.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/vga|C:/Users/Fermat/workplace/NJU_MIPS/vga/vga.v|
+!i113 1
+R6
+Z24 !s92 -vlog01compat -work work +incdir+C:/Users/Fermat/workplace/NJU_MIPS/vga
+R8
+vvga_ctrl
+R9
+!i10b 1
+!s100 o:f4HzNlFVL;M=i>Z]ETa0
+IzN0dEUO3c@0?iioI]0Xzk3
+R2
+R0
+R19
+8C:/Users/Fermat/workplace/NJU_MIPS/vga/vga_ctrl.v
+FC:/Users/Fermat/workplace/NJU_MIPS/vga/vga_ctrl.v
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/vga/vga_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/vga|C:/Users/Fermat/workplace/NJU_MIPS/vga/vga_ctrl.v|
+!i113 1
+R6
+R24
+R8
+vvideo_ram
+R17
+!i10b 1
+!s100 7jLOL7Y>Rl^`mbm[j6JLN2
+I`O8T[62I4`5LVTeVPJOiS3
+R2
+R0
+R19
+8C:/Users/Fermat/workplace/NJU_MIPS/vga/video_ram.v
+FC:/Users/Fermat/workplace/NJU_MIPS/vga/video_ram.v
+L0 2
+R4
+r1
+!s85 0
+31
+R18
+!s107 macro.v|C:/Users/Fermat/workplace/NJU_MIPS/vga/video_ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/vga|C:/Users/Fermat/workplace/NJU_MIPS/vga/video_ram.v|
+!i113 1
+R6
+R24
+R8
+vvideo_ram_ip0
+R1
+!i10b 1
+!s100 YP[HbGH`_@HaozSCL>hFo1
+IG<_;e0PCLL_]]0SZlk8E;0
+R2
+R0
+w1544854100
+8C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip0.v
+FC:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip0.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS|C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip0.v|
+!i113 1
+R6
+R7
+R8
+vvideo_ram_ip1
+R1
+!i10b 1
+!s100 f6hV`S`Fb`;16ICDRELPW3
+In9g9;ITETm3=8W_=@[[^Q1
+R2
+R0
+w1544854135
+8C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip1.v
+FC:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip1.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS|C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip1.v|
+!i113 1
+R6
+R7
+R8
+vvideo_ram_ip2
+R1
+!i10b 1
+!s100 J1Aa9_IAa]nJfK;ji0VU31
+IEf3FQ=F?B^O6Pfe[Ko]>N2
+R2
+R0
+w1544854166
+8C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip2.v
+FC:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip2.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS|C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip2.v|
+!i113 1
+R6
+R7
+R8
+vvideo_ram_ip3
+R1
+!i10b 1
+!s100 2=>`@ZfWnoDegG13o3J4k0
+Io<DKVd5aHPei:CMc]^jJ13
+R2
+R0
+w1544854193
+8C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip3.v
+FC:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip3.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS|C:/Users/Fermat/workplace/NJU_MIPS/video_ram_ip3.v|
+!i113 1
+R6
+R7
+R8
+vVolume_Controller
+R1
+!i10b 1
+!s100 ]cdZMMS]=4W[Ug`6f3<oW1
+IcMKS>JUoHPY=ePTQ3AHnm3
+R2
+R0
+R19
+8C:/Users/Fermat/workplace/NJU_MIPS/audio/Volume_Controller.v
+FC:/Users/Fermat/workplace/NJU_MIPS/audio/Volume_Controller.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/audio/Volume_Controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fermat/workplace/NJU_MIPS/audio|C:/Users/Fermat/workplace/NJU_MIPS/audio/Volume_Controller.v|
+!i113 1
+R6
+R11
+R8
+n@volume_@controller
+vxck
+!s110 1544871966
+!i10b 1
+!s100 ]TFd^N7Wb`JKzd<oNJGBi1
+I9ehW5daU<^gRV0Szl?j5V2
+R2
+R0
+w1544855022
+8C:/Users/Fermat/workplace/NJU_MIPS/xck_sim/xck.vo
+FC:/Users/Fermat/workplace/NJU_MIPS/xck_sim/xck.vo
+L0 31
+R4
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/Fermat/workplace/NJU_MIPS/xck_sim/xck.vo|
+!s90 -reportprogress|300|C:/Users/Fermat/workplace/NJU_MIPS/xck_sim/xck.vo|
+!i113 1
+R8

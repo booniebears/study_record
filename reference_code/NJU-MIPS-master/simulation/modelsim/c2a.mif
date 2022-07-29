@@ -1,0 +1,110 @@
+-- Copyright (C) 2017  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=8;
+DEPTH=256;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=UNS;
+
+CONTENT BEGIN
+	[0..13]  :   0;
+	14   :   96;
+	[15..20]  :   0;
+	21   :   113;
+	22   :   49;
+	[23..25]  :   0;
+	26   :   122;
+	27   :   115;
+	28   :   97;
+	29   :   119;
+	30   :   50;
+	[31..32]  :   0;
+	33   :   99;
+	34   :   120;
+	35   :   100;
+	36   :   101;
+	37   :   52;
+	38   :   51;
+	[39..40]  :   0;
+	41   :   32;
+	42   :   118;
+	43   :   102;
+	44   :   116;
+	45   :   114;
+	46   :   53;
+	[47..48]  :   0;
+	49   :   110;
+	50   :   98;
+	51   :   104;
+	52   :   103;
+	53   :   121;
+	54   :   54;
+	[55..57]  :   0;
+	58   :   109;
+	59   :   106;
+	60   :   117;
+	61   :   55;
+	62   :   56;
+	[63..64]  :   0;
+	65   :   44;
+	66   :   107;
+	67   :   105;
+	68   :   111;
+	69   :   48;
+	70   :   57;
+	[71..72]  :   0;
+	73   :   46;
+	74   :   47;
+	75   :   108;
+	76   :   59;
+	77   :   112;
+	78   :   45;
+	[79..81]  :   0;
+	82   :   39;
+	83   :   0;
+	84   :   91;
+	85   :   61;
+	[86..89]  :   0;
+	90   :   10;
+	91   :   93;
+	92   :   0;
+	93   :   92;
+	[94..101]  :   0;
+	102  :   8;
+	[103..104]  :   0;
+	105  :   49;
+	106  :   0;
+	107  :   52;
+	108  :   55;
+	[109..111]  :   0;
+	112  :   48;
+	113  :   0;
+	114  :   50;
+	115  :   53;
+	116  :   54;
+	117  :   56;
+	[118..121]  :   0;
+	122  :   51;
+	[123..124]  :   0;
+	125  :   57;
+	[126..149]  :   0;
+	150  :   1;
+	151  :   2;
+	152  :   3;
+	153  :   4;
+	[154..255]  :   0;
+END;

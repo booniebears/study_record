@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at div.v(27): always construct contains both blocking and non-blocking assignments File: C:/Users/10558/Desktop/NJU_MIPS/cpu/div.v Line: 27
+Warning (10268): Verilog HDL information at keyboard.v(41): always construct contains both blocking and non-blocking assignments File: C:/Users/10558/Desktop/NJU_MIPS/keyboard/keyboard.v Line: 41
+Warning (10268): Verilog HDL information at I2S.v(50): always construct contains both blocking and non-blocking assignments File: C:/Users/10558/Desktop/NJU_MIPS/audio/I2S.v Line: 50

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+DIR=${AM_HOME}/am/arch/mips32/img
+DEST=$1
+shift
+
+mips-linux-gnu-ld --gc-sections -T $DIR/loader.ld -e _trm_init -o $DEST --start-group $@ --end-group
+mips-linux-gnu-objdump -d $DEST > $DEST.txt
+
+mips-linux-gnu-objcopy -S --set-section-flags .bss=alloc,contents -O binary $DEST $DEST.bin

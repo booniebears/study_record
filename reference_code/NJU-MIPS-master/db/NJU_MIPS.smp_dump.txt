@@ -1,0 +1,19 @@
+
+State Machine - |NJU_MIPS|audio:player|I2C_Audio_Config:i2c|mi2c_state
+Name mi2c_state.11 mi2c_state.10 mi2c_state.01 mi2c_state.00 
+mi2c_state.00 0 0 0 0 
+mi2c_state.01 0 0 1 1 
+mi2c_state.10 0 1 0 1 
+mi2c_state.11 1 0 0 1 
+
+State Machine - |NJU_MIPS|keyboard:kb|state
+Name state.S1 
+state.S0 0 
+state.S1 1 
+
+State Machine - |NJU_MIPS|sopc:cpu|cpu:mips0|div:div0|state
+Name state.11 state.10 state.01 state.00 
+state.00 0 0 0 0 
+state.01 0 0 1 1 
+state.10 0 1 0 1 
+state.11 1 0 0 1 

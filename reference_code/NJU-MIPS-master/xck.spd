@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="xck_sim/xck.vo" type="VERILOG" />
+ <topLevel name="xck" />
+ <deviceFamily name="cyclonev" />
+</simPackage>
